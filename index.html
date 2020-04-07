@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900&display=swap&subset=cyrillic"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="200"></a>
+            <nav class="header__navigation">
+                <ul class="header__contact-list">
+                    <li class="header__contact-list-item"><a href="tel:88005559807"
+                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
+                    </li>
+                    <li class="header__contact-list-item"><a href="#calculate"
+                            class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
+                            ЗАЯВКУ</a></li>
+                </ul>
+                <ul class="header__navigation-list">
+                    <li class="header__navigation-list-item"><a href="#buy-car"
+                            class="header__navigation-list-link flowing-scroll">ЗАКАЗ
+                            АВТО</a></li>
+                    <li class="header__navigation-list-item"><a href="#delivery"
+                            class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
+                            РЕГИОНЫ</a></li>
+                    <li class="header__navigation-list-item"><a href="#how-to-buy"
+                            class="header__navigation-list-link flowing-scroll">КАК
+                            КУПИТЬ</a></li>
+                    <li class="header__navigation-list-item"><a href="#advantages"
+                            class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>
+                    <li class="header__navigation-list-item"><a href="#reviews"
+                            class="header__navigation-list-link flowing-scroll">ОТЗЫВЫ</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="home">
+        <div class="container home__container">
+            <div class="home__main-content">
+                <h1 class="home__title">
+                    <p class="text_bold">ПОКУПКА АВТОМОБИЛЕЙ</p>
+                    напрямую <p class="text_bold">НА ЯПОНСКИХ
+                        АУКЦИОНАХ</p> без посредников
+                </h1>
+                <a href="#" class="button home__btn">РАСЧЕТ СТОИМОСТИ</a>
+            </div>
+            <div class="home__discription">
+                <p class="text_bold_red"> ВНИМАНИЕ!</p> Авто старше 2008 года НЕВОЗМОЖНО растаможить под полную пошлину
+                с ПТС. Автомобили старше 2008 года возят только конструкторами, распилами, либо палетами на запчасти.
+                Так же в Японии АВТОМОБИЛЕЙ С ЛЕВЫМ РУЛЕМ практически НЕТ. МЫ ЗАНИМАЕМСЯ преимущественно ПРИВОЗОМ
+                ПРАВОРУЛЬНЫХ АВТО!
+            </div>
+        </div>
+    </section>
+
+    <section class="buy-car" id="buy-car">
+        <div class="container buy-car__container">
+            <div class="buy-car__left">
+                <h3 class="buy-car__title">Покупка и доставка авто <br>
+                    с аукционов Японии</h3>
+
+                <ul class="buy-car__list">
+                    <li class="buy-car__list-item">Поможем в поиске, подборе авто и дадим профессиональные
+                        рекомендации по приобретению автомобилей с аукционов;</li>
+                    <li class="buy-car__list-item">Осуществляем выкуп авто со всех аукционов Японии, в том
+                        числе и с закрытых аукционов;</li>
+                    <li class="buy-car__list-item">Без скрытых платежей, 100% прозрачность расходов;</li>
+                    <li class="buy-car__list-item">Осуществляем доставку по всей России;</li>
+                    <li class="buy-car__list-item">Привезем под полную пошлину или конструктором.</li>
+                </ul>
+            </div>
+            <div class="buy-car__right">
+                <div class="buy-car__form-container">
+                    <h4 class="buy-car__form-title">Получите расчет стоимости
+                        авто из Японии</h4>
+                    <form action="" class="buy-car__form">
+                        <input type="text" name="consultation__name" id="buy-car__form-name" placeholder="Ваше имя *"
+                            required>
+                        <input type="tel" name="consultation__phone" id="buy-car__form-phone" placeholder="Телефон *"
+                            required>
+                        <textarea name="consultation__discription" id="buy-car__form-discription"
+                            placeholder="Информация об авто"></textarea>
+                        <input type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ">
+                        <div class="buy-car__form-checkbox-container">
+                            <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
+                                class="buy-car__form-checkbox" required>
+                            <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
+                            <p>Соглашаюсь на обработку персональных
+                                данных</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="difference">
+        <div class="container difference__container">
+            <h3 class="difference__title">Почему опасно покупать машину с рук?</h3>
+            <div class="difference__subtitle">Многие задаются вопросом "Почему нельзя просто купить у частного лица
+                автомобиль привезенный из той же Японии ?".
+                Конечно можно, но в таком случае, Вы не застрахованы от таких вещей как:</div>
+            <iframe class="difference__video" width="770" height="470" src="https://www.youtube.com/embed/f5-Nwd0CJU4"
+                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <div class="difference__content">
+                <div class="difference__content-left">
+                    <div class="difference__content-title-container">
+                        <h4 class="difference__content-title">При покупке с рук в РФ</h4>
+                        <div class="difference__content-subtitle">возможные проблемы</div>
+                    </div>
+                    <div class="difference__triggers">
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Подделка документов</div>
+                            <div class="difference__trigeer-item-discription">Угнанный или арестованный
+                                автомобиль</div>
+                        </div>
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Смотанный пробег</div>
+                            <div class="difference__trigeer-item-discription">Смотать пробег для
+                                увеличения стоимости авто
+                                стоит 500 ₽</div>
+                        </div>
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Восстановленные авто</div>
+                            <div class="difference__trigeer-item-discription">Перекупы покупают битые
+                                авто в Японии, восстанавливают
+                                и продают по рыночным ценам</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="difference__content-right">
+                    <div class="difference__content-title-container">
+                        <h4 class="difference__content-title">На японских аукционах</h4>
+                        <div class="difference__content-subtitle">вы получаете</div>
+                    </div>
+                    <div class="difference__triggers">
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Юридически чистый авто</div>
+                            <div class="difference__trigeer-item-discription">Чистый пробег, чистая
+                                история автомобиля</div>
+                        </div>
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Экономия средств</div>
+                            <div class="difference__trigeer-item-discription">Покупка авто дешевле
+                                рыночной цены в РФ</div>
+                        </div>
+                        <div class="difference__trigeer-item">
+                            <div class="difference__trigeer-item-title">Авто без пробега по РФ</div>
+                            <div class="difference__trigeer-item-discription">Без пробега и износа по
+                                дорогам РФ, без плохого
+                                топлива</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery" id="delivery">
+        <div class="container delivery__container">
+            <h3 class="delivery__title">Доставим авто в ваш город</h3>
+            <div class="delivery__select-car">
+                <div class="delivery__select-car-item">
+                    <div class="car-item__img-container">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+                            viewBox="0 0 98.967 98.967" style="enable-background:new 0 0 98.967 98.967;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M17.275,52.156c-4.124,0-7.468,3.343-7.468,7.468c0,0.318,0.026,0.631,0.066,0.938c0.463,3.681,3.596,6.528,7.401,6.528
+                               c3.908,0,7.112-3.004,7.437-6.83c0.017-0.209,0.031-0.422,0.031-0.637C24.743,55.499,21.4,52.156,17.275,52.156z M13.537,56.81
+                               l1.522,1.523c-0.118,0.203-0.211,0.422-0.271,0.656h-2.146C12.752,58.177,13.063,57.435,13.537,56.81z M12.632,60.282h2.163
+                               c0.061,0.23,0.151,0.448,0.271,0.648l-1.526,1.525C13.067,61.835,12.749,61.093,12.632,60.282z M16.629,64.263
+                               c-0.809-0.113-1.544-0.43-2.166-0.899l1.518-1.519c0.2,0.117,0.419,0.203,0.648,0.263V64.263z M16.629,57.14
+                               c-0.235,0.062-0.455,0.154-0.66,0.275l-1.521-1.521c0.625-0.475,1.367-0.789,2.181-0.902V57.14z M17.922,54.99
+                               c0.814,0.113,1.557,0.429,2.181,0.903l-1.52,1.521c-0.204-0.121-0.426-0.213-0.66-0.275L17.922,54.99L17.922,54.99z
+                                M17.922,64.261v-2.152c0.23-0.061,0.447-0.146,0.647-0.264l1.519,1.519C19.466,63.833,18.73,64.148,17.922,64.261z
+                                M21.014,62.462l-1.531-1.533c0.12-0.201,0.217-0.416,0.278-0.646h2.146C21.793,61.091,21.488,61.839,21.014,62.462z
+                                M19.764,58.989c-0.061-0.234-0.153-0.453-0.271-0.656l1.524-1.523c0.471,0.625,0.782,1.367,0.894,2.18H19.764z" />
+                                    <path
+                                        d="M79.284,52.156c-4.124,0-7.468,3.343-7.468,7.468c0,0.318,0.026,0.631,0.066,0.938c0.463,3.681,3.596,6.528,7.4,6.528
+                               c3.908,0,7.112-3.004,7.438-6.83c0.017-0.209,0.031-0.422,0.031-0.637C86.753,55.499,83.409,52.156,79.284,52.156z M75.546,56.81
+                               l1.521,1.523c-0.118,0.203-0.211,0.422-0.271,0.656H74.65C74.761,58.177,75.072,57.435,75.546,56.81z M74.642,60.282h2.163
+                               c0.061,0.23,0.151,0.448,0.271,0.648l-1.525,1.525C75.076,61.835,74.757,61.093,74.642,60.282z M78.638,64.263
+                               c-0.809-0.113-1.544-0.43-2.166-0.899l1.518-1.519c0.2,0.117,0.419,0.203,0.648,0.263V64.263z M78.638,57.14
+                               c-0.235,0.062-0.455,0.154-0.66,0.275l-1.521-1.521c0.625-0.475,1.366-0.789,2.181-0.902V57.14z M79.932,54.99
+                               c0.814,0.113,1.557,0.429,2.181,0.903l-1.521,1.521c-0.204-0.121-0.426-0.215-0.66-0.275V54.99z M79.932,64.261v-2.152
+                               c0.23-0.061,0.447-0.146,0.647-0.264l1.519,1.519C81.476,63.833,80.739,64.148,79.932,64.261z M83.023,62.462l-1.531-1.531
+                               c0.12-0.202,0.218-0.416,0.278-0.647h2.146C83.802,61.091,83.498,61.839,83.023,62.462z M81.773,58.989
+                               c-0.061-0.234-0.152-0.453-0.271-0.656l1.523-1.523c0.472,0.625,0.782,1.367,0.895,2.18H81.773z" />
+                                    <path d="M97.216,48.29v-5.526c0-0.889-0.646-1.642-1.524-1.779c-2.107-0.33-5.842-0.953-7.52-1.47
+                               c-2.406-0.742-11.702-4.678-14.921-5.417c-3.22-0.739-17.738-4.685-31.643,0.135c-2.353,0.815-12.938,5.875-19.162,8.506
+                               c-1.833,0.04-19.976,3.822-20.942,6.414c-0.966,2.593-1.269,3.851-1.447,4.509c-0.178,0.658,0,3.807,1.348,6
+                               c1.374,0.777,4.019,1.299,7.077,1.649c-0.035-0.187-0.073-0.371-0.097-0.56c-0.053-0.404-0.078-0.773-0.078-1.125
+                               c0-4.945,4.022-8.969,8.968-8.969s8.968,4.023,8.968,8.969c0,0.254-0.017,0.506-0.036,0.754c-0.047,0.555-0.147,1.094-0.292,1.613
+                               c0.007,0,0.024,0,0.024,0l44.516-0.896c-0.02-0.115-0.046-0.229-0.061-0.346c-0.053-0.402-0.078-0.772-0.078-1.125
+                               c0-4.945,4.022-8.968,8.968-8.968c4.946,0,8.969,4.022,8.969,8.968c0,0.019-0.002,0.035-0.003,0.053l0.19-0.016l7.611-1.433
+                               c0,0,2.915-1.552,2.915-5.822C98.967,49.56,97.216,48.29,97.216,48.29z M53.057,43.051L36.432,43.56
+                               c0.306-2.491-1.169-3.05-1.169-3.05c6.609-5.999,19.929-6.202,19.929-6.202L53.057,43.051z M71.715,42.29l-15.15,0.509l1.373-8.49
+                               c7.83-0.102,12.303,1.626,12.303,1.626l2.237,3.61L71.715,42.29z M80.256,42.238h-4.221l-4.22-5.795
+                               c3.166,1.26,5.7,2.502,7.209,3.287C79.94,40.206,80.44,41.223,80.256,42.238z" />
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg></div>
+                    <div class="car-item__title">СЕДАН</div>
+                </div>
+                <div class="delivery__select-car-item delivery__select-car-item_wide">
+                    <div class="car-item__img-container"><svg class="car-item__img-container-van" id="Layer_1"
+                            enable-background="new 0 0 512 512" viewBox="0 0 512 512" width="40"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="m130 344c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z" />
+                            <path d="m372 344c-8.822 0-16 7.178-16 16s7.178 16 16 16 16-7.178 16-16-7.178-16-16-16z" />
+                            <path
+                                d="m512 227c0-69.622-60.223-139-143.223-139h-320.777c-26.467 0-48 21.533-48 48v184c0 26.467 21.532 48 48 48h18.518c3.951 31.525 30.903 56 63.482 56 32.39 0 59.473-24.264 63.467-55.958 34.876 0 80.201-.042 115.051-.042 3.951 31.525 30.903 56 63.482 56s59.531-24.475 63.482-56h28.518c26.467 0 48-21.533 48-48-.002-10 0-92.718 0-93zm-382 181c-26.468 0-48-21.533-48-48s21.532-48 48-48 48 21.533 48 48-21.532 48-48 48zm204-147h16c4.418 0 8 3.582 8 8s-3.582 8-8 8h-16c-4.418 0-8-3.582-8-8s3.582-8 8-8zm38 147c-26.468 0-48-21.533-48-48s21.532-48 48-48 48 21.533 48 48-21.532 48-48 48zm1.049-189c-16.067 0-28.019-14.803-24.681-30.486l5.857-27.532c2.463-11.578 12.843-19.982 24.682-19.982h79.583c21.481 21.434 34.098 49.171 36.908 78zm122.951 81h-26c-4.411 0-8-3.589-8-8s3.589-8 8-8h26z" />
+                        </svg>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
+                            viewBox="0 0 332.062 332.063" style="enable-background:new 0 0 332.062 332.063;"
+                            xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M327.061,159.368c-0.466-5.621-0.989-11.982-2.01-17.471c-0.709-3.839-2.268-8.951-7.539-8.951
+                               c-0.528,0-1.057,0.052-1.579,0.106c-0.326,0.031-0.652,0.075-1.186,0.085c-0.011,0-0.182-0.166-0.399-0.797
+                               c-1.548-4.433-8.041-9.947-16.367-16.691c-2.051-1.655-4.506-3.648-5.552-4.676c0.384-2.656,0.327-5.918-1.522-8.166
+                               c-0.859-1.049-2.475-2.302-5.261-2.302c-0.409,0-0.844,0.025-1.812,0.111c-2.01,0-6.038-0.826-11.615-1.979
+                               c-14.38-2.951-41.146-8.45-81.281-9.315c-58.438-1.157-104.359,41.014-106.252,42.79l-1.354,1.258
+                               c-2.4,1.16-9.979,3.933-33.145,8.487c-32.858,6.47-39.126,16.938-40.31,20.986c-2.623,1.958-6.871,6.628-7.544,12.122
+                               c-0.541,4.381-1.766,6.173-1.766,6.168L0,181.864v30.924l0.064,0.564c1.781,8.212,10.292,12.557,24.612,12.557
+                               c4.567,0,7.993-0.466,7.86-0.466c0.199-0.011,1.965-0.041,5.025-0.104c-0.313-0.865-0.598-1.74-0.844-2.636
+                               c-0.238-0.864-0.456-1.734-0.624-2.625c-0.404-2.098-0.631-4.257-0.631-6.473c0-19.004,15.461-34.466,34.465-34.466
+                               s34.466,15.462,34.466,34.466c0,1.719-0.168,3.386-0.409,5.038c-0.132,0.896-0.285,1.786-0.487,2.656
+                               c-0.207,0.901-0.424,1.792-0.699,2.667c43.038-0.922,97.802-2.139,140.216-3.205c-0.187-0.87-0.306-1.751-0.425-2.642
+                               c-0.119-0.88-0.187-1.76-0.233-2.65c-0.031-0.622-0.093-1.232-0.093-1.864c0-19.004,15.462-34.466,34.465-34.466
+                               c18.735,0,34,15.037,34.425,33.679c0,0.259,0.041,0.522,0.041,0.787c0,0.668-0.062,1.32-0.104,1.983
+                               c-0.052,0.942-0.145,1.879-0.269,2.801c8.098-1.336,14.188-5.603,17.714-12.505c6.032-11.801,2.957-27.78,0.792-31.173
+                               C328.158,172.875,327.578,165.698,327.061,159.368z" />
+                                    <path d="M43.178,225.215c4.492,10.325,14.768,17.548,26.745,17.548c12.407,0,22.975-7.762,27.19-18.677
+                               c0.334-0.87,0.632-1.761,0.886-2.672c0.243-0.87,0.445-1.761,0.611-2.662c0.295-1.672,0.481-3.392,0.481-5.151
+                               c0-16.109-13.054-29.164-29.163-29.164c-16.109,0-29.163,13.055-29.163,29.164c0,2.185,0.259,4.312,0.717,6.363
+                               c0.194,0.891,0.427,1.766,0.709,2.62C42.479,223.486,42.808,224.355,43.178,225.215z" />
+                                    <path d="M248.436,220.617c3.148,12.707,14.603,22.146,28.283,22.146c14.302,0,26.176-10.309,28.661-23.892
+                               c0.16-0.88,0.284-1.766,0.372-2.672c0.078-0.859,0.13-1.719,0.13-2.599c0-0.021,0-0.042,0-0.068
+                               c-0.031-16.072-13.08-29.096-29.163-29.096c-16.104,0-29.163,13.055-29.163,29.164c0,0.585,0.057,1.154,0.088,1.734
+                               c0.052,0.896,0.14,1.775,0.274,2.646C248.053,218.872,248.229,219.752,248.436,220.617z" />
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="car-item__title">МИНИВЕН / КРОССОВЕР</div>
+                </div>
+                <div class="delivery__select-car-item">
+                    <div class="car-item__img-container"><svg version="1.1" id="Capa_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                            y="0px" width="40px" viewBox="0 0 99.088 99.087"
+                            style="enable-background:new 0 0 99.088 99.087;" xml:space="preserve">
+                            <g>
+                                <g>
+                                    <path d="M15.078,51.768c-5.832,0-10.562,4.728-10.562,10.562c0,0.451,0.037,0.891,0.094,1.328
+                               c0.655,5.205,5.086,9.233,10.468,9.233c5.526,0,10.058-4.25,10.516-9.66c0.024-0.298,0.045-0.597,0.045-0.901
+                               C25.639,56.496,20.911,51.768,15.078,51.768z M11.107,59.339l1.617,1.618c-0.126,0.216-0.225,0.449-0.287,0.697h-2.28
+                               C10.274,60.792,10.605,60.002,11.107,59.339z M10.147,63.029h2.298c0.064,0.245,0.16,0.475,0.287,0.688l-1.621,1.621
+                               C10.609,64.675,10.27,63.889,10.147,63.029z M14.392,67.255c-0.859-0.12-1.641-0.457-2.301-0.956l1.611-1.611
+                               c0.213,0.125,0.445,0.215,0.689,0.277L14.392,67.255L14.392,67.255z M14.392,59.691c-0.251,0.063-0.483,0.164-0.701,0.292
+                               l-1.615-1.617c0.664-0.504,1.452-0.838,2.316-0.958V59.691z M15.766,57.409c0.864,0.12,1.653,0.454,2.316,0.959l-1.616,1.616
+                               c-0.216-0.128-0.451-0.229-0.7-0.292V57.409z M15.766,67.253v-2.288c0.244-0.062,0.475-0.155,0.688-0.279l1.612,1.612
+                               C17.406,66.797,16.623,67.133,15.766,67.253z M19.049,65.342l-1.626-1.627c0.128-0.214,0.23-0.44,0.295-0.687h2.28
+                               C19.875,63.887,19.552,64.683,19.049,65.342z M17.721,61.655c-0.063-0.249-0.162-0.481-0.287-0.697l1.618-1.618
+                               c0.5,0.664,0.831,1.452,0.949,2.315H17.721z" />
+                                    <path d="M80.286,51.768c-5.831,0-10.562,4.728-10.562,10.562c0,0.451,0.037,0.891,0.095,1.328
+                               c0.655,5.205,5.085,9.233,10.467,9.233c5.527,0,10.06-4.25,10.517-9.66c0.023-0.298,0.045-0.597,0.045-0.901
+                               C90.848,56.496,86.12,51.768,80.286,51.768z M76.315,59.339l1.618,1.618c-0.127,0.216-0.226,0.449-0.289,0.697h-2.278
+                               C75.483,60.792,75.813,60.002,76.315,59.339z M75.356,63.029h2.298c0.062,0.245,0.16,0.475,0.287,0.688l-1.622,1.621
+                               C75.817,64.675,75.479,63.889,75.356,63.029z M79.6,67.255c-0.858-0.12-1.641-0.457-2.301-0.956l1.612-1.611
+                               c0.212,0.125,0.444,0.215,0.688,0.277V67.255L79.6,67.255z M79.6,59.691c-0.25,0.063-0.482,0.164-0.7,0.292l-1.615-1.617
+                               c0.664-0.504,1.452-0.838,2.315-0.958V59.691z M80.975,57.409c0.865,0.12,1.652,0.454,2.315,0.959l-1.614,1.616
+                               c-0.218-0.128-0.453-0.229-0.701-0.292V57.409z M80.975,67.253v-2.288c0.244-0.062,0.476-0.155,0.688-0.279l1.613,1.612
+                               C82.615,66.797,81.832,67.133,80.975,67.253z M84.258,65.342l-1.627-1.627c0.129-0.214,0.23-0.44,0.297-0.687h2.278
+                               C85.084,63.887,84.762,64.683,84.258,65.342z M82.93,61.655c-0.063-0.249-0.162-0.481-0.287-0.697l1.619-1.618
+                               c0.5,0.664,0.83,1.452,0.947,2.315H82.93z" />
+                                    <path
+                                        d="M75.914,26.198l-28.335,0.357c-0.85,0.01-1.53,0.708-1.519,1.558c0.009,0.837,0.688,1.509,1.52,1.519
+                               c0.014,0,0.025,0,0.038,0l28.335-0.357c0.85-0.01,1.53-0.708,1.52-1.558C77.461,26.867,76.74,26.166,75.914,26.198z" />
+                                    <path d="M64.707,62.041H31.253c-0.85,0-1.538,0.689-1.538,1.539c0,0.851,0.688,1.539,1.538,1.539h33.454
+                               c0.85,0,1.538-0.688,1.538-1.539C66.245,62.73,65.557,62.041,64.707,62.041z" />
+                                    <path
+                                        d="M98.658,53.259c-0.357-0.436-0.895-0.688-1.458-0.688h-1.749l-1.777-19.458c-0.098-1.074-1.006-1.891-2.086-1.875
+                               l-50.028,0.75c-0.778,0.012-1.51,0.376-1.988,0.991l-6.631,8.523l-21.714,1.345c-1.181,0.074-2.262,0.689-2.926,1.668
+                               l-1.223,1.799c0,0-2.094,0.737-2.655,1.201c-0.487,0.403-1.456,2.069-1.456,2.069c-0.184,0.26-0.206,0.603-0.059,0.884
+                               c0.146,0.283,0.438,0.46,0.757,0.46v1.896H1.858C0.831,52.825,0,53.657,0,54.682v3.424c0,1.272,1.031,2.305,2.305,2.305H3.54
+                               l3.183-8.782c0.29-0.8,1.05-1.333,1.9-1.333h11.11c0.63,0,1.225,0.294,1.607,0.796l7.484,9.824h39.064l5.482-9.25
+                               c0.363-0.614,1.023-0.99,1.738-0.99h10.201c0.72,0,1.385,0.383,1.748,1.005l5.375,9.236h1.928c2.027,0,3.773-1.435,4.165-3.425
+                               l0.524-2.666C99.162,54.271,99.018,53.697,98.658,53.259z M51.068,43.467H39.54v-3.541h-2.335l3.494-4.613
+                               c0.15-0.199,0.384-0.317,0.633-0.321l11.694-0.174v5.108L51.068,43.467z M70.131,43.467H57.699v-8.719l14.993-0.223v6.38
+                               L70.131,43.467z M76.538,43.467v-9l12.907-0.192c0.22-0.003,0.402,0.166,0.419,0.385l0.606,8.807H76.538z" />
+                                </g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="car-item__title">ДЖИП</div>
+                </div>
+            </div>
+
+            <div class="delivery__path">
+                <div class="delivery__path-left">
+                    <div class="delivery__path-left-town">ВЛАДИВОСТОК</div>
+                </div>
+                <div class="delivery__path-animate"></div>
+                <div class="delivery__path-right">
+                    <div class="delivery__path-select">
+                        <select name="town" id="delivery__select-town">
+                            <option value="Выберите город">Выберите город</option>
+
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery__price">
+                <div class="delivery__price-title">СТОИМОСТЬ ДОСТАВКИ:</div>
+                <div class="delivery__price-value">0 ₽</div>
+                <div class="delivery__price-attention">!
+                    <!-- <div class="delivery__price-attention-info">Расчёт носит информационный характер, произведен на
+                        основе тарифов транспортной компании. актуальную стоимость доставки авто уточняйте пожалуйста, у
+                        менеджера.</div> -->
+                </div>
+            </div>
+
+            <div class="button delivery__btn">ОСТАВИТЬ ЗАЯВКУ</div>
+        </div>
+    </section>
+
+    <section class="faq" id="how-to-buy">
+        <div class="container faq__container">
+            <h3 class="faq__title">Схема работы</h3>
+            <div class="faq__content">
+                <ul class="faq__list">
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-number">1</div>
+                        <div class="faq__list-item-name">Заявка</div>
+                        <div class="faq__list-item-disqription">Вы оставляете заявку на сайте либо связываетесь с нами
+                            удобным для вас способом. <a href="#">Оставить заявку.</a> </div>
+                    </li>
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-number">2</div>
+                        <div class="faq__list-item-name">Оформление</div>
+                        <div class="faq__list-item-disqription">Заключаем договор, Вы вносите гарантийный депозит. <a
+                                href="#">Образец договора.</a> </div>
+                    </li>
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-number">3</div>
+                        <div class="faq__list-item-name">Поиск, подбор и покупка авто</div>
+                        <div class="faq__list-item-disqription">Вам предлагаются подходящие варианты с аукционов, Вы
+                            принимаете решение, автомобиль выкупается.</div>
+                    </li>
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-number">4</div>
+                        <div class="faq__list-item-name">Доставка в РФ и оформление</div>
+                        <div class="faq__list-item-disqription">Мы транспортируем авто в порт Японии, грузим на судно и
+                            доставляем во Владивосток, где проходит таможенное оформление</div>
+                    </li>
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-number">5</div>
+                        <div class="faq__list-item-name">Доставка до вашего города</div>
+                        <div class="faq__list-item-disqription">Мы доставляем Вам автомобиль в любой регион России
+                            выбранным Вами способом, либо Вы сами забираете его во Владивостоке. <a href="#">Тарифы.</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="button faq__btn">ЗАДАТЬ ВОПРОС</div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container experience__container">
+            <h3 class="experience__title">УСПЕШНЫЙ ОПЫТ РАБОТЫ <br>
+                С АУКЦИОНАМИ ЯПОНИИ БОЛЕЕ 11 ЛЕТ</h3>
+            <div class="experience__content">
+                <div class="experience__content-item">Доступ ко всем аукционам Японии, в том числе и к обширному
+                    ассортименту аварийных авто</div>
+                <div class="experience__content-item">Возможность клиенту самостоятельно участвовать в онлайн торгах
+                </div>
+                <div class="experience__content-item">Помощь в поиске, подборе авто и профессиональные рекомендации по
+                    приобретению автомобилей с аукционов</div>
+                <div class="experience__content-item">Возможность заказа авто не выходя из дома</div>
+                <div class="experience__content-item">Отлаженная система доставки авто в любую точку РФ - автовозы / жд
+                    / контейнера</div>
+                <div class="experience__content-item">Свыше 10.000 довольных клиентов из 150 городов России</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+        <div class="container advantages__container">
+            <div class="advantages__left">
+                <h3 class="advantages__title">Наши преимущества</h3>
+                <div class="advantages__content">
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">С нами удобно</div>
+                        <div class="advantages__conteny-item-discription">Мы учитываем все пожелания клиента,
+                            осуществляем поиск и подбор автомобиля.
+                            Даем профессиональные рекомендации по
+                            выбору автомобилей на аукционах</div>
+                    </div>
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">Осуществляем выкуп</div>
+                        <div class="advantages__conteny-item-discription">Автомобилей со всех аукционов Японии,
+                            в том числе и с закрытых аукционов.
+                            Оформляем все документы на покупку
+                            и отправку автомобиля</div>
+                    </div>
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">Быстро доставим в РФ</div>
+                        <div class="advantages__conteny-item-discription">Максимально быстрая доставка автомобиля
+                            с аукциона в состоянии, заявленном
+                            в аукционном листе</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="advantages__right">
+                <h3 class="advantages__title">Гарантии</h3>
+                <div class="advantages__content">
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">Достоверность данных</div>
+                        <div class="advantages__conteny-item-discription">Все автомобили, которые поступают на
+                            аукционах,
+                            проходят независимую оценку экспертов.
+                            Все недостатки авто, тех. состояние и реальный
+                            пробег отображается в аукционных листах.</div>
+                    </div>
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">Надежная доставка</div>
+                        <div class="advantages__conteny-item-discription">После покупки автомобиля автомобили
+                            доставляются
+                            на нашу стоянку в Японии. Покупатель получает
+                            детальный фотоотчет по автомобилю. Доставка в РФ
+                            осуществляется судах типа Ro-Ro. На всех этапах
+                            доставки автомобили полностью застрахованы. При
+                            выгрузке в порту также производится фотоопись,
+                            служащая доказательством в случае любых споров.</div>
+                    </div>
+                    <div class="advantages__content-item">
+                        <div class="advantages__content-item-name">Выделенный менеджер</div>
+                        <div class="advantages__conteny-item-discription">На всех этапах покупки авто вас сопровождает
+                            личный
+                            менеджер, он осуществляет поиск, подбор и расчет
+                            стоимости вариантов автомобилей. Мы переводим все
+                            аукционные листы и сообщаем вам о всех замечаниях
+                            перед покупкой, чтобы вы могли принять правильное
+                            решение.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="button advantages__btn">ОСТАВИТЬ ЗАЯВКУ</div>
+        </div>
+    </section>
+
+
+    <section class="reviews" id="reviews">
+        <div class="container reviews__container">
+            <h3 class="reviews__title">МЫ ДОСТИГЛИ СВОЕЙ ЦЕЛИ, 95% КЛИЕНТОВ ОСТАЮТСЯ ДОВОЛЬНЫ</h3>
+            <div class="reviews__videos">
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+                <div class="reviews__video-item"><iframe frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe></div>
+            </div>
+
+            <div class="reviews__slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="swiper-slide">
+                            <div class="slide__img-container"><img src="img/slider/fit.jpg" alt=""></div>
+                            <div class="slide__content">
+                                <div class="slide__title">
+                                     Новосибирск, Prius
+                                </div>
+                                <div class="slide__text">Хотелось бы оставить отзыв о работе компании JAPAN STAR. Решили
+                                    мы с супругой поменять ее авто.Выбор пал на XONDA FIT GE7.У нас в городе не
+                                    оказалось нормальных машин,битые,крашенные или ржавые!!! Составили договор и
+                                    отправили депозит.Выбрали на аукционе подходящий вариант , сделали ставку!!! И чудо
+                                    мне позвонил менеджер Илья и сказал что мы купили выбранный авто!!! Любой вопрос при
+                                    покупке машины решался в течении 5-10 мин.Машина превзошла все наши ожидания!!! С
+                                    оценкой 4 балла мы получили практически новый автомобиль.Хотелось бы выразить
+                                    огромную благодарность Илье за помощь в подборе нашей машины и всей команде JAPAN
+                                    STAR. Народ не бойтесь заказывать машины в JAPAN STAR это честная компания!!!
+                                    Огромное всем вам спасибо!!!</div>
+                            </div>
+                        </div> -->
+
+
+
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container faq__container">
+            <h3 class="faq__title">Часто задаваемые вопросы</h3>
+            <div class="faq__content">
+                <ul class="faq__list faq__list_second" id="faq__list_second">
+                    <li class="faq__list-item">
+                        <div class="faq__list-item-name">Почему стоит заказать авто с аукциона, а не купить на рынке?
+                        </div>
+                        <div class="faq__list-item-disqription">Заказывая авто с аукциона вы можете сэкономить от 10% до
+                            30%, в большинстве случаев не маленькая сумма. Вы всегда получите авто с прозрачной
+                            историей. За что никогда мы не сможем ручиться на рынке. Огромный выбор новых машин, более
+                            50 000 машин торгуются каждую неделю. За три месяца более 2 485 000 машин. </div>
+                    </li>
+                    <li class="faq__list-item">
+
+                        <div class="faq__list-item-name">Можно ли оформить распил или конструктор?</div>
+                        <div class="faq__list-item-disqription">Нет! Такое осуществить нельзя, конструктор везут «себе
+                            под документы», распил — что бы перекинуть всё со свежей машины на свою старую.</a> </div>
+                    </li>
+                    <li class="faq__list-item">
+
+                        <div class="faq__list-item-name">Скручивают ли пробег в Японии?</div>
+                        <div class="faq__list-item-disqription">Скручивают, но очень-очень редко. Этот факт в Японии
+                            преследуется по закону.</div>
+                    </li>
+                    <li class="faq__list-item">
+
+                        <div class="faq__list-item-name">Качественные ли авто привозят с аукционов?</div>
+                        <div class="faq__list-item-disqription">Машины перед тем, как выставить на торги осматриваются
+                            профессиональными экспертами и все замечания записываются в аукционный лист если машина была
+                            бита, то в аукционе так же прописывают какие повреждения были и на сколько качественно
+                            выполнен ремонт, история автомобиля полностью чиста. Поэтому невозможно привезти не
+                            качественный автомобиль, если вы этого сами не хотите.</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="button faq__btn">ЗАДАТЬ ВОПРОС</div>
+        </div>
+    </section>
+
+    <section class="calculate" id="calculate">
+        <div class="container calculate__container">
+            <div class="calculate__form-container">
+                <h3 class="calculate__title">СКОЛЬКО СТОИТ АВТО
+                    ИЗ ЯПОНИИ?</h3>
+                <div class="calculate__subtitle">ВВЕДИТЕ ПАРАМЕТРЫ,
+                    ЧТОБЫ УЗНАТЬ ПРЯМО СЕЙЧАС:</div>
+                <form action="" class="calculate__form">
+                    <!-- <input type="text" name="calculate__car" id="calculate__form-car" placeholder="Марка автомобиля *"
+                        required> -->
+
+                    <select name="calculate__car" id="calculate__form-select-car" class="calculate__form-select-car"
+                        required>
+                        <option value="">Марка автомобиля *</option>
+                    </select>
+                    <!-- <input type="text" name="calculate__model" id="calculate__form-model" placeholder="Модель"> -->
+
+                    <select name="calculate__model" id="calculate__form-select-model" class="calculate__form-select-car"
+                        required>
+                        <option value="">Модель</option>
+                    </select>
+                    <input type="text" name="calculate__year" id="calculate__form-year" placeholder="Год" readonly>
+                    <input type="text" name="calculate__name" id="calculate__form-name" placeholder="Ваше имя *"
+                        required>
+                    <input type="tel" name="calculate__phone" id="calculate__form-phone" placeholder="Телефон *"
+                        required>
+
+                    <div class="calculate__form-radio-title">ВЫБЕРИТЕ СПОСОБ ВВОЗА: <div class="calculate__form_faq">?
+                        </div>
+                    </div>
+
+                    <div class="calculate__form-radio-container calculate__form-radio-container-faq">
+                        <input type="radio" name="calculate__form-method" id="calculate__form-method1" checked>
+                        <label for="calculate__form-method1">Под полную пошлину</label>
+                    </div>
+                    <div class="calculate__form-radio-container">
+                        <input type="radio" name="calculate__form-method" id="calculate__form-method2">
+                        <label for="calculate__form-method2">Распил или конструктор Без ПТС</label>
+                    </div>
+                    <input type="submit" value="РАССЧИТАТЬ СТОИМОСТЬ">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__watsapp-contacts">
+                <h4 class="footer__title">Отдел продаж и подбора автомобилей:</h4>
+                <a href="tel:+79147055848" class="footer__watsapp-contacts-item">
+                    <div class="footer__watsapp-contacts-phone">+7 (914) 705-58-48</div>
+                    <div class="footer__watsapp-contacts-name">Максим</div>
+                </a>
+                <a href="tel:+79147103858" class="footer__watsapp-contacts-item">
+                    <div class="footer__watsapp-contacts-phone">+7 (914) 710-38-58</div>
+                    <div class="footer__watsapp-contacts-name">Анна</div>
+                </a>
+                <a href="tel:+79147104858" class="footer__watsapp-contacts-item">
+                    <div class="footer__watsapp-contacts-phone">+7 (914) 710-48-58</div>
+                    <div class="footer__watsapp-contacts-name">Илья</div>
+                </a>
+                <a href="tel:+79147114448" class="footer__watsapp-contacts-item">
+                    <div class="footer__watsapp-contacts-phone">+7 (914) 711-44-48</div>
+                    <div class="footer__watsapp-contacts-name">Антон</div>
+                </a>
+                <a href="tel:+79149705848" class="footer__watsapp-contacts-item">
+                    <div class="footer__watsapp-contacts-phone">+7 (914) 970-58-48</div>
+                    <div class="footer__watsapp-contacts-name">Максим</div>
+                </a>
+            </div>
+
+            <div class="footer__contacts">
+                <h4 class="footer__title">Бесплатная горячая линия:</h4>
+                <a href="tel:+79149705848" class="footer__contacts-phone-container">
+                    <div class="footer__contacts-phone">8 800 555-98-07</div>
+                    <div class="footer__contacts-addition">* Звонок по РФ бесплатный</div>
+                </a>
+
+                <a href="mailto:info@jpstar.ru" class="footer__contacts-email">info@jpstar.ru</a>
+
+                <a href="#" class="footer__contacts-adress">Россия, г Владивосток, <br>
+                    ул. Крылова 10 оф.207, оф.217</a>
+
+                <a href="#" class="footer__contacts-adress">JAPAN, 930-0094 Toyama-ken, <br>
+                    Toyama-shi, Azumiko</a>
+
+                <div class="footer__contacts-socials">
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                            enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
+                            <g>
+                                <path
+                                    d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"
+                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                            enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
+                            <g>
+                                <path
+                                    d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"
+                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                            enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
+                            <g>
+                                <path
+                                    d="m23.469 5.929.03.196c-.29-1.029-1.073-1.823-2.068-2.112l-.021-.005c-1.871-.508-9.4-.508-9.4-.508s-7.51-.01-9.4.508c-1.014.294-1.798 1.088-2.083 2.096l-.005.021c-.699 3.651-.704 8.038.031 11.947l-.031-.198c.29 1.029 1.073 1.823 2.068 2.112l.021.005c1.869.509 9.4.509 9.4.509s7.509 0 9.4-.509c1.015-.294 1.799-1.088 2.084-2.096l.005-.021c.318-1.698.5-3.652.5-5.648 0-.073 0-.147-.001-.221.001-.068.001-.149.001-.23 0-1.997-.182-3.951-.531-5.846zm-13.861 9.722v-7.293l6.266 3.652z"
+                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" height="512px"
+                            viewBox="-23 -21 682 682.66669" width="512px">
+                            <g>
+                                <path
+                                    d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
+                                    fill-rule="evenodd" data-original="#000000" class="active-path"
+                                    data-old_color="#000000" fill="#FFFFFF" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
+                            width="512px" height="512px">
+                            <g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160    C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48    h192c61.76,0,112,50.24,112,112V352z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#FFFFFF" />
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <path
+                                            d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336    c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#FFFFFF" />
+                                    </g>
+                                </g>
+                                <g>
+                                    <g>
+                                        <circle cx="393.6" cy="118.4" r="17.056" data-original="#000000"
+                                            class="active-path" data-old_color="#000000" fill="#FFFFFF" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg></a>
+                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                            enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px" class="">
+                            <g>
+                                <path
+                                    d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"
+                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                    fill="#FFFFFF" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__buttons">
+                <div class="button footer__btn-question">задать вопрос</div>
+                <div class="button footer__btn-call">обратный звонок</div>
+                <div id="vk_groups"></div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="header header_scroll">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="200"></a>
+            <nav class="header__navigation">
+                <ul class="header__contact-list">
+                    <li class="header__contact-list-item"><a href="tel:88005559807"
+                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
+                    </li>
+                    <li class="header__contact-list-item"><a href="#calculate"
+                            class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
+                            ЗАЯВКУ</a></li>
+                </ul>
+                <ul class="header__navigation-list">
+                    <li class="header__navigation-list-item"><a href="#buy-car"
+                            class="header__navigation-list-link flowing-scroll">ЗАКАЗ
+                            АВТО</a></li>
+                    <li class="header__navigation-list-item"><a href="#delivery"
+                            class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
+                            РЕГИОНЫ</a></li>
+                    <li class="header__navigation-list-item"><a href="#how-to-buy"
+                            class="header__navigation-list-link flowing-scroll">КАК
+                            КУПИТЬ</a></li>
+                    <li class="header__navigation-list-item"><a href="#advantages"
+                            class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>
+                    <li class="header__navigation-list-item"><a href="#reviews"
+                            class="header__navigation-list-link flowing-scroll">ОТЗЫВЫ</a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?167"></script>
+    <script src="js/cities.js"></script>
+    <script src="js/deliver.js"></script>
+    <script src="js/cars.js"></script>
+    <script src="js/calculate.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/reviews.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
