@@ -14,18 +14,11 @@
 
 <body>
 
-    <header class="header">
+    <header class="header header_main ">
         <div class="container header__container">
-            <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="200"></a>
-            <nav class="header__navigation">
-                <ul class="header__contact-list">
-                    <li class="header__contact-list-item"><a href="tel:88005559807"
-                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
-                    </li>
-                    <li class="header__contact-list-item"><a href="#calculate"
-                            class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
-                            ЗАЯВКУ</a></li>
-                </ul>
+            <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="150"></a>
+            <nav class="header__navigation header__navigation_main  ">
+
                 <ul class="header__navigation-list">
                     <li class="header__navigation-list-item"><a href="#buy-car"
                             class="header__navigation-list-link flowing-scroll">ЗАКАЗ
@@ -34,7 +27,7 @@
                             class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
                             РЕГИОНЫ</a></li>
                     <li class="header__navigation-list-item"><a href="#how-to-buy"
-                            class="header__navigation-list-link flowing-scroll">КАК
+                            class="header__navigation-list-link flowing-scroll header__navigation-list-link_red">КАК
                             КУПИТЬ</a></li>
                     <li class="header__navigation-list-item"><a href="#advantages"
                             class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>
@@ -43,7 +36,20 @@
                     </li>
 
                 </ul>
+                <ul class="header__contact-list">
+                    <li class="header__contact-list-item"><a href="tel:88005559807"
+                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
+                    </li>
+                    <li class="header__contact-list-item"><a href="#calculate"
+                            class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
+                            ЗАЯВКУ</a></li>
+                </ul>
+
             </nav>
+
+            <div class="header__mobile-nav-btn-wrapper">
+                <div class="header__mobile-nav-btn"></div>
+            </div>
         </div>
     </header>
 
@@ -60,7 +66,7 @@
             </div>
             <div class="home__discription">
                 <p class="text_bold_red"> ВНИМАНИЕ!</p> Авто старше 2008 года НЕВОЗМОЖНО растаможить под полную пошлину
-                с ПТС. Автомобили старше 2008 года возят только конструкторами, распилами, либо палетами на запчасти.
+                с ПТС. Автомобили старше 2008 года возят только конструкторами, распилами, либо паллетами на запчасти.
                 Так же в Японии АВТОМОБИЛЕЙ С ЛЕВЫМ РУЛЕМ практически НЕТ. МЫ ЗАНИМАЕМСЯ преимущественно ПРИВОЗОМ
                 ПРАВОРУЛЬНЫХ АВТО!
             </div>
@@ -74,8 +80,8 @@
                     с аукционов Японии</h3>
 
                 <ul class="buy-car__list">
-                    <li class="buy-car__list-item">Поможем в поиске, подборе авто и дадим профессиональные
-                        рекомендации по приобретению автомобилей с аукционов;</li>
+                    <li class="buy-car__list-item">Поможем в поиске, подборе авто и предоставим профессиональные
+                        рекомендации по приобретению автомобилей с аукционов Японии;</li>
                     <li class="buy-car__list-item">Осуществляем выкуп авто со всех аукционов Японии, в том
                         числе и с закрытых аукционов;</li>
                     <li class="buy-car__list-item">Без скрытых платежей, 100% прозрачность расходов;</li>
@@ -93,11 +99,11 @@
                         <input type="tel" name="consultation__phone" id="buy-car__form-phone" placeholder="Телефон *"
                             required>
                         <textarea name="consultation__discription" id="buy-car__form-discription"
-                            placeholder="Информация об авто"></textarea>
+                            placeholder="Информация об авто: марка, модель, год, метод ввоза"></textarea>
                         <input type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ">
                         <div class="buy-car__form-checkbox-container">
                             <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
-                                class="buy-car__form-checkbox" required>
+                                class="buy-car__form-checkbox" checked required>
                             <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
                             <p>Соглашаюсь на обработку персональных
                                 данных</p>
@@ -176,7 +182,7 @@
         <div class="container delivery__container">
             <h3 class="delivery__title">Доставим авто в ваш город</h3>
             <div class="delivery__select-car">
-                <div class="delivery__select-car-item">
+                <div class="delivery__select-car-item delivery__select-car-item_active">
                     <div class="car-item__img-container">
                         <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px"
@@ -458,13 +464,17 @@
                         <div class="faq__list-item-number">3</div>
                         <div class="faq__list-item-name">Поиск, подбор и покупка авто</div>
                         <div class="faq__list-item-disqription">Вам предлагаются подходящие варианты с аукционов, Вы
-                            принимаете решение, автомобиль выкупается.</div>
+                            принимаете решение, автомобиль выкупается. <br>
+                            На всех этапах покупки авто Вас сопровождает личный менеджер, он осуществляет поиск, подбор
+                            и расчет стоимости вариантов автомобилей. Мы переводим все аукционные листы и сообщаем Вам о
+                            всех замечаниях перед покупкой, чтобы вы могли принять правильное решение.</div>
                     </li>
                     <li class="faq__list-item">
                         <div class="faq__list-item-number">4</div>
                         <div class="faq__list-item-name">Доставка в РФ и оформление</div>
-                        <div class="faq__list-item-disqription">Мы транспортируем авто в порт Японии, грузим на судно и
-                            доставляем во Владивосток, где проходит таможенное оформление</div>
+                        <div class="faq__list-item-disqription">После покупки доставляем авто на нашу стоянку в Японии.
+                            Вы получаете детальный фотоотчет по автомобилю. На всех этапах доставки Ваш автомобиль
+                            полностью застрахован. По приходу во Владивосток осуществляем таможенное оформление.</div>
                     </li>
                     <li class="faq__list-item">
                         <div class="faq__list-item-number">5</div>
@@ -505,21 +515,21 @@
                 <div class="advantages__content">
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">С нами удобно</div>
-                        <div class="advantages__conteny-item-discription">Мы учитываем все пожелания клиента,
+                        <div class="advantages__content-item-discription">Мы учитываем все пожелания клиента,
                             осуществляем поиск и подбор автомобиля.
                             Даем профессиональные рекомендации по
                             выбору автомобилей на аукционах</div>
                     </div>
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">Осуществляем выкуп</div>
-                        <div class="advantages__conteny-item-discription">Автомобилей со всех аукционов Японии,
+                        <div class="advantages__content-item-discription">Автомобилей со всех аукционов Японии,
                             в том числе и с закрытых аукционов.
                             Оформляем все документы на покупку
                             и отправку автомобиля</div>
                     </div>
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">Быстро доставим в РФ</div>
-                        <div class="advantages__conteny-item-discription">Максимально быстрая доставка автомобиля
+                        <div class="advantages__content-item-discription">Максимально быстрая доставка автомобиля
                             с аукциона в состоянии, заявленном
                             в аукционном листе</div>
                     </div>
@@ -531,7 +541,7 @@
                 <div class="advantages__content">
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">Достоверность данных</div>
-                        <div class="advantages__conteny-item-discription">Все автомобили, которые поступают на
+                        <div class="advantages__content-item-discription">Все автомобили, которые поступают на
                             аукционах,
                             проходят независимую оценку экспертов.
                             Все недостатки авто, тех. состояние и реальный
@@ -539,7 +549,7 @@
                     </div>
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">Надежная доставка</div>
-                        <div class="advantages__conteny-item-discription">После покупки автомобиля автомобили
+                        <div class="advantages__content-item-discription">После покупки автомобиля автомобили
                             доставляются
                             на нашу стоянку в Японии. Покупатель получает
                             детальный фотоотчет по автомобилю. Доставка в РФ
@@ -550,7 +560,7 @@
                     </div>
                     <div class="advantages__content-item">
                         <div class="advantages__content-item-name">Выделенный менеджер</div>
-                        <div class="advantages__conteny-item-discription">На всех этапах покупки авто вас сопровождает
+                        <div class="advantages__content-item-discription">На всех этапах покупки авто вас сопровождает
                             личный
                             менеджер, он осуществляет поиск, подбор и расчет
                             стоимости вариантов автомобилей. Мы переводим все
@@ -638,14 +648,24 @@
                         </div>
                         <div class="faq__list-item-disqription">Заказывая авто с аукциона вы можете сэкономить от 10% до
                             30%, в большинстве случаев не маленькая сумма. Вы всегда получите авто с прозрачной
-                            историей. За что никогда мы не сможем ручиться на рынке. Огромный выбор новых машин, более
-                            50 000 машин торгуются каждую неделю. За три месяца более 2 485 000 машин. </div>
+                            историей. За что никогда мы не сможем ручиться на рынке. Огромный выбор машин, более
+                            150 000 машин торгуются каждую неделю. За три месяца более 2.000.000 машин. </div>
                     </li>
                     <li class="faq__list-item">
 
                         <div class="faq__list-item-name">Можно ли оформить распил или конструктор?</div>
-                        <div class="faq__list-item-disqription">Нет! Такое осуществить нельзя, конструктор везут «себе
-                            под документы», распил — что бы перекинуть всё со свежей машины на свою старую.</a> </div>
+                        <div class="faq__list-item-disqription">Вариантов несколько: <br>
+                            - можете приобрести интересусующее Вас авто в России с документами в аварийном состоянии и
+                            привезти точно такое же авто распилом или конструктором с Японии без пробега по РФ. Заменить
+                            все элементы авто с распила/конструктора на купленный в РФ. В таком случае у Вас будет
+                            старый кузов с документами и с новыми запчастями. Заменить можно абсолютно все - ходовку,
+                            двигатель, салон, все навесные детали. Из-за запрета по замене кузова, на сегодняшний день,
+                            среди автовладельцев это очень распространено, т.к. таким образом, с небольшими вложениями,
+                            законно получают авто без пробега по РФ без обращения в ГИБДД. <br>
+                            - Так же, автовладельцы переваривают планку, что является незаконным, т.е. на привезенный
+                            распил/конструктор переваривают планку с номером кузова от аварийного авто. Таким образом
+                            получают новый кузов со старым номером кузова и старой ПТС. Вариант менее затратный, но
+                            незаконный. </div>
                     </li>
                     <li class="faq__list-item">
 
@@ -673,9 +693,20 @@
             <div class="calculate__form-container">
                 <h3 class="calculate__title">СКОЛЬКО СТОИТ АВТО
                     ИЗ ЯПОНИИ?</h3>
-                <div class="calculate__subtitle">ВВЕДИТЕ ПАРАМЕТРЫ,
-                    ЧТОБЫ УЗНАТЬ ПРЯМО СЕЙЧАС:</div>
+
                 <form action="" class="calculate__form">
+                    <div class="calculate__form-radio-title">ВЫБЕРИТЕ СПОСОБ ВВОЗА: <div class="calculate__form_faq">?
+                        </div>
+                    </div>
+
+                    <div class="calculate__form-radio-container calculate__form-radio-container-faq">
+                        <input type="radio" name="calculate__form-method" id="calculate__form-method1" checked>
+                        <label for="calculate__form-method1">Под полную пошлину</label>
+                    </div>
+                    <div class="calculate__form-radio-container">
+                        <input type="radio" name="calculate__form-method" id="calculate__form-method2">
+                        <label for="calculate__form-method2">Распил или конструктор Без ПТС</label>
+                    </div>
                     <!-- <input type="text" name="calculate__car" id="calculate__form-car" placeholder="Марка автомобиля *"
                         required> -->
 
@@ -689,24 +720,24 @@
                         required>
                         <option value="">Модель</option>
                     </select>
-                    <input type="text" name="calculate__year" id="calculate__form-year" placeholder="Год" readonly>
+                    <!-- <input type="text" name="calculate__year" id="calculate__form-year" placeholder="Год" readonly> -->
+                    <div class="calculate__form-select-year-container">
+                        <select name="calculate__year-from" id="calculate__form-select-year-from"
+                            class="calculate__form-select-year-from">
+                            <option value="">C</option>
+                        </select>
+
+                        <select name="calculate__year-to" id="calculate__form-select-year-to"
+                            class="calculate__form-select-year-to">
+                            <option value="">По</option>
+                        </select>
+                    </div>
                     <input type="text" name="calculate__name" id="calculate__form-name" placeholder="Ваше имя *"
                         required>
                     <input type="tel" name="calculate__phone" id="calculate__form-phone" placeholder="Телефон *"
                         required>
 
-                    <div class="calculate__form-radio-title">ВЫБЕРИТЕ СПОСОБ ВВОЗА: <div class="calculate__form_faq">?
-                        </div>
-                    </div>
 
-                    <div class="calculate__form-radio-container calculate__form-radio-container-faq">
-                        <input type="radio" name="calculate__form-method" id="calculate__form-method1" checked>
-                        <label for="calculate__form-method1">Под полную пошлину</label>
-                    </div>
-                    <div class="calculate__form-radio-container">
-                        <input type="radio" name="calculate__form-method" id="calculate__form-method2">
-                        <label for="calculate__form-method2">Распил или конструктор Без ПТС</label>
-                    </div>
                     <input type="submit" value="РАССЧИТАТЬ СТОИМОСТЬ">
                 </form>
             </div>
@@ -838,8 +869,10 @@
             </div>
 
             <div class="footer__buttons">
-                <div class="button footer__btn-question">задать вопрос</div>
-                <div class="button footer__btn-call">обратный звонок</div>
+                <div class="footer__buttons-container">
+                    <div class="button footer__btn-question">задать вопрос</div>
+                    <div class="button footer__btn-call">обратный звонок</div>
+                </div>
                 <div id="vk_groups"></div>
             </div>
         </div>
@@ -865,7 +898,7 @@
                             class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
                             РЕГИОНЫ</a></li>
                     <li class="header__navigation-list-item"><a href="#how-to-buy"
-                            class="header__navigation-list-link flowing-scroll">КАК
+                            class="header__navigation-list-link flowing-scroll header__navigation-list-link_red">КАК
                             КУПИТЬ</a></li>
                     <li class="header__navigation-list-item"><a href="#advantages"
                             class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>

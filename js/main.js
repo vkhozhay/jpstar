@@ -1,3 +1,37 @@
+let mobileNavBtnContainer = document.querySelector('.header__mobile-nav-btn-wrapper');
+let mobileNavBtn = document.querySelector('.header__mobile-nav-btn');
+let mobileHeader = document.querySelector('.header_main');
+
+mobileNavBtnContainer.addEventListener('click', function () {
+    if (mobileNavBtn.classList.contains('header__mobile-nav-btn_active')) {
+        mobileHeader.classList.remove('header_main_active');
+        mobileNavBtn.classList.remove('header__mobile-nav-btn_active');
+    } else {
+        mobileHeader.classList.add('header_main_active');
+        mobileNavBtn.classList.add('header__mobile-nav-btn_active');
+    }
+
+})
+
+let body = document.querySelector('body');
+let mobileNav = document.querySelector('.header__navigation_main');
+let bodyHummer = new Hammer(body);
+
+bodyHummer.get('swipe').set({
+    threshold: 150
+});
+
+bodyHummer.on('swipeleft', function () {
+    mobileHeader.classList.add('header_main_active');
+    mobileNavBtn.classList.add('header__mobile-nav-btn_active');
+})
+
+bodyHummer.on('swiperight', function () {
+    mobileHeader.classList.remove('header_main_active');
+    mobileNavBtn.classList.remove('header__mobile-nav-btn_active');
+})
+
+
 $('.flowing-scroll').on('click', function () {
     let el = $(this);
     let dest = el.attr('href'); // получаем направление
@@ -84,7 +118,7 @@ var swiper = new Swiper('.swiper-container', {
 VK.Widgets.Group("vk_groups", {
     mode: 3,
     no_cover: 1,
-    width: "400",
+    width: "300",
     color1: '3E4551',
     color2: 'FFFFFF',
     color3: 'E74C3C'
