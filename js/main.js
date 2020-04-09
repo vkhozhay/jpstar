@@ -13,6 +13,133 @@ mobileNavBtnContainer.addEventListener('click', function () {
 
 })
 
+
+let popupConsultation = document.querySelector('.popup-consultation-form');
+let openPopupConsultationBtn = document.querySelector('.header_main .header__contact-list-request-link');
+let openPopupConsultationBtn2 = document.querySelector('.header_scroll .header__contact-list-request-link');
+let openPopupConsultationBtn3 = document.querySelector('.delivery__btn');
+let openPopupConsultationBtn4 = document.querySelector('.advantages__btn');
+let closePopupConsultationBtn = document.querySelector('.popup-consultation-form .popup-form__btn-close');
+
+
+openPopupConsultationBtn.addEventListener('click', function () {
+    popupConsultation.classList.add('popup-consultation-form_active');
+})
+
+openPopupConsultationBtn2.addEventListener('click', function () {
+    popupConsultation.classList.add('popup-consultation-form_active');
+})
+
+openPopupConsultationBtn3.addEventListener('click', function () {
+    popupConsultation.classList.add('popup-consultation-form_active');
+})
+
+openPopupConsultationBtn4.addEventListener('click', function () {
+    popupConsultation.classList.add('popup-consultation-form_active');
+})
+
+closePopupConsultationBtn.addEventListener('click', function () {
+    popupConsultation.classList.remove('popup-consultation-form_active');
+})
+
+popupConsultation.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup-consultation-form')) {
+        popupConsultation.classList.remove('popup-consultation-form_active');
+    }
+})
+
+
+
+let popupCalculate = document.querySelector('.popup-calculate-form');
+let openPopupCalculate = document.querySelector('.home__btn');
+let closePopupCalculate = document.querySelector('.popup-calculate-form .popup-form__btn-close');
+
+openPopupCalculate.addEventListener('click', function () {
+    popupCalculate.classList.add('popup-calculate-form_active');
+})
+
+closePopupCalculate.addEventListener('click', function () {
+    popupCalculate.classList.remove('popup-calculate-form_active');
+})
+
+popupCalculate.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup-calculate-form')) {
+        popupCalculate.classList.remove('popup-calculate-form_active');
+    }
+})
+
+
+
+let popupQuestion = document.querySelector('.popup-question-form');
+let openPopupQuestionBtn1 = document.querySelector('.faq__btn');
+let openPopupQuestionBtn2 = document.querySelector('.faq__btn_second');
+let openPopupQuestionBtn3 = document.querySelector('.footer__btn-question');
+let closePopupQuestionBtn = document.querySelector('.popup-question-form .popup-form__btn-close');
+
+openPopupQuestionBtn1.addEventListener('click', function () {
+    popupQuestion.classList.add('popup-question-form_active');
+})
+
+openPopupQuestionBtn2.addEventListener('click', function () {
+    popupQuestion.classList.add('popup-question-form_active');
+})
+
+openPopupQuestionBtn3.addEventListener('click', function () {
+    popupQuestion.classList.add('popup-question-form_active');
+})
+
+
+
+closePopupQuestionBtn.addEventListener('click', function () {
+    popupQuestion.classList.remove('popup-question-form_active');
+})
+
+popupQuestion.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup-question-form')) {
+        popupQuestion.classList.remove('popup-question-form_active');
+    }
+})
+
+
+
+
+let popupCallMe = document.querySelector('.popup-call-me-form');
+let openPopupCallMe = document.querySelector('.footer__btn-call');
+let closePopupCallMe = document.querySelector('.popup-call-me-form .popup-form__btn-close');
+
+openPopupCallMe.addEventListener('click', function () {
+    popupCallMe.classList.add('popup-call-me-form_active');
+})
+
+closePopupCallMe.addEventListener('click', function () {
+    popupCallMe.classList.remove('popup-call-me-form_active');
+})
+
+popupCallMe.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup-call-me-form')) {
+        popupCallMe.classList.remove('popup-call-me-form_active');
+    }
+})
+
+
+
+let popupThanks = document.querySelector('.popup-thanks');
+let closePopupThanks = document.querySelector('.popup-thanks .popup-form__btn-close');
+
+closePopupThanks.addEventListener('click', function () {
+    popupThanks.classList.remove('popup-thanks_active');
+})
+
+popupThanks.addEventListener('click', function (e) {
+    if (e.target.classList.contains('popup-thanks')) {
+        popupThanks.classList.remove('popup-thanks_active');
+    }
+})
+
+
+
+
+
 let body = document.querySelector('body');
 let mobileNav = document.querySelector('.header__navigation_main');
 let bodyHummer = new Hammer(body);
@@ -36,18 +163,14 @@ $('.flowing-scroll').on('click', function () {
     let el = $(this);
     let dest = el.attr('href'); // получаем направление
     if (dest !== undefined && dest !== '') { // проверяем существование
-        $('.mobile-menu').removeClass('mobile-menu_active');
+        $('.header_main').removeClass('header_main_active');
+        $('.header__mobile-nav-btn').removeClass('header__mobile-nav-btn_active');
         $('html').animate({
                 scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
             }, 500 // скорость прокрутки
         );
     }
 
-    mobileNavigation.classList.remove('navigation-mobile_active');
-
-    for (i = 0; i < sectionArr.length; i++) {
-        sectionArr[i].classList.remove('section__menu-active');
-    }
     return false;
 });
 
@@ -107,6 +230,170 @@ for (let i = 0; i < 8; i++) {
 
 
 
+// Отправка данных на сервер
+$('#consultation-form_main').trigger('reset');
+$(function () {
+    'use strict';
+    $('#consultation-form_main').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#consultation-form_main').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+                closePopUp();
+            }
+        });
+    });
+});
+
+$('#calculate-form_main').trigger('reset');
+$(function () {
+    'use strict';
+    $('#calculate-form_main').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#calculate-form_main').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+                closePopUp();
+            }
+        });
+    });
+});
+
+$('#consultation-form_popup').trigger('reset');
+$(function () {
+    'use strict';
+    $('#consultation-form_popup').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-consultation-form').removeClass('popup-consultation-form_active');
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#consultation-form_popup').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+                closePopUp();
+            }
+        });
+    });
+});
+
+$('#calculate-form_popup').trigger('reset');
+$(function () {
+    'use strict';
+    $('#calculate-form_popup').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-calculate-form').removeClass('popup-calculate-form_active');
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#calculate-form_popup').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+                closePopUp();
+            }
+        });
+    });
+});
+
+$('#question-form_popup').trigger('reset');
+$(function () {
+    'use strict';
+    $('#question-form_popup').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-question-form').removeClass('popup-question-form_active');
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#question-form_popup').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+                closePopUp();
+            }
+        });
+    });
+});
+
+$('#call-me-form_popup').trigger('reset');
+$(function () {
+    'use strict';
+    $('#call-me-form_popup').on('submit', function (e) {
+        e.preventDefault();
+        $.ajax({
+            url: 'mail.php',
+            type: 'POST',
+            contentType: false,
+            processData: false,
+            data: new FormData(this),
+            success: function (msg) {
+                console.log(msg);
+                if (msg == 'ok') {
+                    $('.popup-call-me-form').removeClass('popup-call-me-form_active');
+                    $('.popup-thanks').addClass('popup-thanks_active');
+                    $('#call-me-form_popup').trigger('reset');
+                    // очистка формы
+                } else {
+                    alert('Ошибка');
+                }
+
+            }
+        });
+    });
+});
+
+
+
+
 var swiper = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.swiper-button-next',
@@ -125,6 +412,12 @@ VK.Widgets.Group("vk_groups", {
 }, 62033979);
 
 
+
+
+
+function openPopup(popap, popapActive) {
+    popap.classList.add(popapActive);
+}
 
 function shuffle(arr) {
     var j, temp;

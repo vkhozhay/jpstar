@@ -188,6 +188,7 @@ body {
     color: #fff;
     text-decoration: none;
     background: linear-gradient(90deg, rgba(76, 75, 139, 1) 0%, rgba(60, 67, 143, 1) 50%, rgba(76, 75, 139, 1) 100%);
+    cursor: pointer;
 }
 
 
@@ -405,7 +406,7 @@ body {
 /* ***************HOME****************** */
 
 .home {
-    background: url('../img/home-bg1.jpg') center/cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 75%, rgba(248, 248, 248, 1) 100%), url('../img/home-bg.jpg') center/cover;
 }
 
 .home__container {
@@ -514,7 +515,7 @@ body {
 /* *****************BUY-CAR******************* */
 
 .buy-car {
-    background: #f8f8f8;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), #f8f8f8;
 }
 
 .buy-car__container {
@@ -910,7 +911,7 @@ body {
 /* ******************DELIVERY******************** */
 
 .delivery {
-    background: url('../img/delivery/delivery-bg.png') center/auto no-repeat, #f8f8f8;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), url('../img/delivery/delivery-bg.png') center/auto no-repeat, #f8f8f8;
 }
 
 .delivery__container {
@@ -1498,7 +1499,7 @@ body {
 /* **************EXPERIENCE***************** */
 
 .experience {
-    background: url('../img/experience-bg.jpg') left/cover no-repeat;
+    background: linear-gradient(0deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), url('../img/experience-bg.jpg') left/cover no-repeat;
 }
 
 .experience__container {
@@ -1690,7 +1691,7 @@ body {
 /* ******************REVIEWS********************* */
 
 .reviews {
-    background: #f8f8f8;
+    background: linear-gradient(180deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), linear-gradient(0deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), #f8f8f8;
 }
 
 .reviews__container {
@@ -1764,20 +1765,15 @@ body {
     flex-direction: column;
     align-items: center;
     width: 80%;
-    max-height: 50rem;
     padding-top: 8rem;
     padding: 8rem 5rem 5rem;
     box-sizing: border-box;
-    overflow-y: scroll;
     background-color: #fff;
     box-shadow: 0px 5px 16.92px 1.08px rgba(0, 0, 0, 0.2);
     transform: translateY(-6rem);
-    transition: max-height .5s;
 }
 
-.slide__content_more {
-    max-height: 1000rem;
-}
+
 
 .slide__title {
     margin-bottom: 5rem;
@@ -1795,7 +1791,7 @@ body {
     font-weight: 400;
     line-height: normal;
     text-align: center;
-    padding-bottom: 3rem;
+
 }
 
 .swiper-button-next::after,
@@ -1824,6 +1820,15 @@ body {
     .slide__title {
         text-align: center;
     }
+
+    .slide__content {
+        max-height: 50rem;
+        overflow-y: scroll;
+    }
+
+    .slide__text {
+        padding-bottom: 3rem;
+    }
 }
 
 
@@ -1832,7 +1837,7 @@ body {
 /* *****************CALCULATE******************* */
 
 .calculate {
-    background: url('../img/calculate-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(0deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), url('../img/calculate-bg.jpg') center/cover no-repeat;
 }
 
 .calculate__container {
@@ -2329,4 +2334,138 @@ body {
         margin-right: 0;
     }
 
+}
+
+
+
+
+/* ****************POPUP********************* */
+
+.popup-consultation-form,
+.popup-calculate-form,
+.popup-question-form,
+.popup-call-me-form,
+.popup-thanks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.popup-consultation-form_active,
+.popup-calculate-form_active,
+.popup-question-form_active,
+.popup-call-me-form_active,
+.popup-thanks_active {
+    display: flex;
+}
+
+.popup-consultation-form .buy-car__form-container,
+.popup-question-form .buy-car__form-container,
+.popup-calculate-form .calculate__form-container,
+.popup-call-me-form .buy-car__form-container,
+.popup-thanks .popup-thanks__container {
+    position: relative;
+}
+
+.popup-form__btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 2rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.popup-form__btn-close::after,
+.popup-form__btn-close::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #3c438f;
+}
+
+.popup-form__btn-close::after {
+    transform: rotate(45deg);
+}
+
+.popup-form__btn-close::before {
+    transform: rotate(-45deg);
+}
+
+.popup-calculate-form {
+    padding: 3rem;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.popup-calculate-form .calculate__form-container {
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.popup-thanks__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60rem;
+    padding: 5rem;
+    box-sizing: border-box;
+    background: linear-gradient(65deg, rgba(138, 169, 189, 1) 0%, rgba(200, 222, 236, 1) 100%);
+    ;
+}
+
+.popup-thanks__title {
+    margin-bottom: 5rem;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: normal;
+}
+
+.popup-thanks__subtitle {
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: normal;
+}
+
+.popup-thanks .footer__contacts-phone-container {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    color: #000000;
+}
+
+.popup-thanks .footer__contacts-phone-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: url('../img/icons/phone.svg') center/contain no-repeat;
+}
+
+.popup-thanks .footer__contacts-socials {
+    width: 80%;
+}
+
+.popup-thanks .footer__socials-item {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid #3c438f;
+}
+
+.popup-thanks .footer__socials-item svg {
+    width: 2.5rem;
+    height: auto;
 }

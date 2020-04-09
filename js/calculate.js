@@ -32,9 +32,9 @@ selectModel.addEventListener('change', function () {
     let currentModel = findObject(currentCar.models, 'modelName', selectModel.value);
 
     if (radioMethod1.checked) {
-        showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo);
+        showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo, carYearsFrom, carYearsTo);
     } else if (radioMethod2.checked) {
-        showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo);
+        showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo, carYearsFrom, carYearsTo);
     }
 
 
@@ -46,7 +46,7 @@ radioMethod1.addEventListener('change', function () {
     let currentCar = findObject(cars, 'name', selectCar.value);
     let currentModel = findObject(currentCar.models, 'modelName', selectModel.value);
 
-    showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo);
+    showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo, carYearsFrom, carYearsTo);
 
 })
 
@@ -54,7 +54,71 @@ radioMethod2.addEventListener('change', function () {
     let currentCar = findObject(cars, 'name', selectCar.value);
     let currentModel = findObject(currentCar.models, 'modelName', selectModel.value);
 
-    showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo);
+    showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo, carYearsFrom, carYearsTo);
+
+})
+
+
+
+
+
+let popupSelectCar = document.querySelector('#popup-calculate__form-select-car');
+let popupSelectModel = document.querySelector('#popup-calculate__form-select-model');
+let popupCarYearsFrom = document.querySelector('#popup-calculate__form-select-year-from');
+let popupCarYearsTo = document.querySelector('#popup-calculate__form-select-year-to');
+let popupRadioMethod1 = document.querySelector('#popup-calculate__form-method1');
+let popupRadioMethod2 = document.querySelector('#popup-calculate__form-method2');
+
+for (let i = 0; i < cars.length; i++) {
+
+    let newOption = document.createElement('option');
+    newOption.innerHTML = cars[i].name;
+    popupSelectCar.appendChild(newOption);
+}
+
+popupSelectCar.addEventListener('change', function () {
+    popupSelectModel.innerHTML = `<option value="">Модель</option>`
+    popupCarYearsFrom.innerHTML = '<option value="">C</option>';
+    popupCarYearsTo.innerHTML = '<option value="">По</option>';
+
+
+    let currentCar = findObject(cars, 'name', popupSelectCar.value);
+
+    for (let i = 0; i < currentCar.models.length; i++) {
+        let newOption = document.createElement('option');
+        newOption.innerHTML = currentCar.models[i].modelName;
+        popupSelectModel.appendChild(newOption);
+    }
+})
+
+popupSelectModel.addEventListener('change', function () {
+    let currentCar = findObject(cars, 'name', popupSelectCar.value);
+    let currentModel = findObject(currentCar.models, 'modelName', popupSelectModel.value);
+
+    if (popupRadioMethod1.checked) {
+        showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo, popupCarYearsFrom, popupCarYearsTo);
+    } else if (popupRadioMethod2.checked) {
+        showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo, popupCarYearsFrom, popupCarYearsTo);
+    }
+
+
+
+
+})
+
+popupRadioMethod1.addEventListener('change', function () {
+    let currentCar = findObject(cars, 'name', popupSelectCar.value);
+    let currentModel = findObject(currentCar.models, 'modelName', popupSelectModel.value);
+
+    showYears(currentModel.modelYearsFrom, currentModel.modelYearsTo, popupCarYearsFrom, popupCarYearsTo);
+
+})
+
+popupRadioMethod2.addEventListener('change', function () {
+    let currentCar = findObject(cars, 'name', popupSelectCar.value);
+    let currentModel = findObject(currentCar.models, 'modelName', popupSelectModel.value);
+
+    showYears(currentModel.constructorYearsFrom, currentModel.constructorYearsTo, popupCarYearsFrom, popupCarYearsTo);
 
 })
 
@@ -66,9 +130,9 @@ function findObject(arr, key, value) {
 }
 
 
-function showYears(modelYearsFrom, modelYearsTo) {
-    carYearsFrom.innerHTML = '<option value="">C</option>';
-    carYearsTo.innerHTML = '<option value="">По</option>';
+function showYears(modelYearsFrom, modelYearsTo, yearsFrom, yearsTo) {
+    yearsFrom.innerHTML = '<option value="">C</option>';
+    yearsTo.innerHTML = '<option value="">По</option>';
 
 
     for (let i = modelYearsFrom; i <= modelYearsTo; i++) {
@@ -76,7 +140,7 @@ function showYears(modelYearsFrom, modelYearsTo) {
         newOption.setAttribute('value', i);
         newOption.innerHTML = i;
 
-        carYearsFrom.appendChild(newOption);
+        yearsFrom.appendChild(newOption);
     }
 
     for (let i = modelYearsFrom; i <= modelYearsTo; i++) {
@@ -86,9 +150,9 @@ function showYears(modelYearsFrom, modelYearsTo) {
         newOption.setAttribute('value', i);
         newOption.innerHTML = i;
 
-        carYearsTo.appendChild(newOption);
+        yearsTo.appendChild(newOption);
     }
 
-    carYearsFrom.value = modelYearsFrom;
-    carYearsTo.value = modelYearsTo;
+    yearsFrom.value = modelYearsFrom;
+    yearsTo.value = modelYearsTo;
 }
