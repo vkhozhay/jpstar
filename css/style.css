@@ -9,6 +9,7 @@ html {
 body {
     overflow-x: hidden;
     box-sizing: border-box;
+    user-select: auto;
 }
 
 .container {
@@ -70,8 +71,9 @@ body {
     position: relative;
     top: 0;
     /* background: url('../img/header-bg.jpg') center/cover; */
-    background: linear-gradient(to bottom, rgba(20, 33, 51, 0.7) 0%, rgba(125, 185, 232, 0) 100%), url('../img/header-bg.jpg') center/cover;
-    ;
+    /* background: linear-gradient(to bottom, rgba(20, 33, 51, 0.7) 0%, rgba(125, 185, 232, 0) 100%), url('../img/header-bg.jpg') center/cover; */
+    background: linear-gradient(to bottom, rgba(20, 33, 51, 0.7) 0%, rgba(125, 185, 232, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
     /* box-shadow: 0px 3px 6.5px 0.5px rgba(96, 96, 96, 0.2); */
     z-index: 9999;
 
@@ -82,6 +84,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding-bottom: 1.5rem;
 }
 
 .header__logo {
@@ -105,22 +108,23 @@ body {
 .header__contact-list,
 .header__navigation-list {
     display: flex;
+    align-items: center;
 }
 
 
 .header__navigation-list-link {
     position: relative;
     padding-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.3rem;
+    font-weight: 500;
     color: #000;
     text-decoration: none;
 
 }
 
 .header__navigation-list-link_red {
-    color: #303F9F;
-    font-size: 1.2rem;
+    color: #e74c3c;
+    font-size: 1.3rem;
     font-weight: 700;
 }
 
@@ -137,7 +141,7 @@ body {
 }
 
 .header__navigation-list-link_red::before {
-    background: #303F9F;
+    background: #e74c3c;
 }
 
 .header__navigation-list-link:hover::before {
@@ -152,6 +156,7 @@ body {
 
 .header__contact-list {
     order: 0;
+    margin-bottom: 1.5rem;
 }
 
 /* .header__navigation-list-item {
@@ -162,33 +167,65 @@ body {
     margin-left: 0;
 }
 
-.header__contact-list-phone-link {
+/* .header__contact-list-phone-link {
     display: flex;
     align-items: center;
     margin-right: 2rem;
-    font-size: 1.4rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 500;
     color: #000;
     text-decoration: none;
     white-space: nowrap;
-}
+} */
 
-.header__contact-list-phone-link::before {
+/* .header__contact-list-phone-link::before {
     content: '';
     display: block;
     height: 1.4rem;
     width: 1.4rem;
     margin-right: 1rem;
     background: url('../img/icons/phone.svg') center/contain no-repeat;
+} */
+
+.header__contacts-phone-container {
+    position: relative;
+    display: block;
+    padding-left: 3rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.header__contacts-phone-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: url('../img/icons/phone.svg') center/contain no-repeat;
+}
+
+.header__contacts-phone {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.header__contacts-addition {
+    font-size: 1.2rem;
+    font-weight: 200;
 }
 
 .header__contact-list-request-link {
+    margin-left: 3rem;
     padding: 1rem 1.5rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: #fff;
     text-decoration: none;
     background: linear-gradient(90deg, rgba(76, 75, 139, 1) 0%, rgba(60, 67, 143, 1) 50%, rgba(76, 75, 139, 1) 100%);
+    background: #e74c3c;
     cursor: pointer;
 }
 
@@ -196,7 +233,8 @@ body {
 @media(max-width:767px) {
 
     .header {
-        background: url('../img/header-bg.jpg') center/cover;
+        /* background: url('../img/header-bg.jpg') center/cover; */
+        background: linear-gradient(65deg, rgba(138, 169, 189, 1) 0%, rgba(200, 222, 236, 1) 100%);
     }
 
     .header_main {
@@ -335,7 +373,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding-bottom: 1rem;
+
     transform: translateY(-120%);
     transition: transform .5s;
     box-shadow: none;
@@ -349,6 +387,7 @@ body {
 .header_scroll .header__container {
     flex-direction: row;
     height: auto;
+    padding-bottom: 0;
 }
 
 .header_scroll .header__logo {
@@ -358,8 +397,10 @@ body {
 .header_scroll .header__navigation {
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center;
     height: auto;
     width: 80%;
+    margin-top: 0;
 }
 
 .header_scroll .header__logo img {
@@ -369,6 +410,7 @@ body {
 .header_scroll .header__contact-list {
     order: 1;
     margin-left: 3rem;
+    margin-bottom: 0;
 }
 
 .header_scroll .header__navigation-list {
@@ -381,21 +423,26 @@ body {
     margin-left: 3rem;
 } */
 
+.header_scroll .header__contacts-phone-container {
+    width: 12rem;
+}
+
 .header_scroll .header__navigation-list-link {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
 .header_scroll .header__navigation-list-link_red {
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .header_scroll .header__contact-list-phone-link {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .header_scroll .header__contact-list-request-link {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 @media(max-width: 1023px) {
@@ -412,7 +459,7 @@ body {
 /* ***************HOME****************** */
 
 .home {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 75%, rgba(248, 248, 248, 1) 100%), url('../img/home-bg.jpg') center/cover;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 75%, rgba(248, 248, 248, 1) 100%), url('../img/home-bg.jpg') center bottom/cover;
 }
 
 .home__container {
@@ -563,6 +610,7 @@ body {
     width: 0.7rem;
     height: 0.7rem;
     background-color: #3c438f;
+    background-color: #e74c3c;
     transform: rotate(45deg);
 }
 
@@ -571,16 +619,17 @@ body {
     display: flex;
     flex-direction: column;
     width: 28rem;
-    padding: 4rem 5rem;
+    padding: 4rem 3rem;
     background-color: #fff;
     box-shadow: 0px 10px 37.6px 2.4px rgba(148, 148, 148, 0.3);
 }
 
 .buy-car__form-title {
-    margin-bottom: 4.5rem;
+    margin-bottom: 3rem;
     font-size: 2rem;
     font-weight: 700;
     line-height: normal;
+    text-align: center;
 }
 
 .buy-car__form {
@@ -623,6 +672,7 @@ body {
     box-sizing: border-box;
     border: 1px solid #e8e8e8;
     box-shadow: 0px 5px 8.46px 0.54px rgba(123, 123, 123, 0.15);
+    resize: none;
 }
 
 .buy-car__form input[type="submit"] {
@@ -661,7 +711,7 @@ body {
 }
 
 .buy-car__form-checkbox-container p {
-    width: 20rem;
+    width: 80%;
     margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: 400;
@@ -1505,7 +1555,7 @@ body {
 /* **************EXPERIENCE***************** */
 
 .experience {
-    background: linear-gradient(0deg, rgba(248, 248, 248, 0) 75%, rgba(255, 255, 255, 1) 100%), url('../img/experience-bg.jpg') left/cover no-repeat;
+    background: url('../img/experience-bg.jpg') left/cover no-repeat;
 }
 
 .experience__container {
@@ -1710,8 +1760,8 @@ body {
 
 .reviews__title {
     margin-bottom: 7.5rem;
-    font-size: 2.4rem;
-    font-weight: 200;
+    font-size: 2.8rem;
+    font-weight: 300;
 }
 
 .reviews__videos {
@@ -1803,6 +1853,7 @@ body {
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: #3c438f;
+    color: #e74c3c;
 }
 
 
@@ -1954,7 +2005,7 @@ body {
 .calculate__form input[type="submit"] {
     position: relative;
     margin-top: 4rem;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
@@ -2090,7 +2141,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 4rem;
 }
 
 .footer__watsapp-contacts {
@@ -2133,7 +2184,8 @@ body {
     content: '';
     position: absolute;
     left: 20rem;
-    bottom: 0;
+    top: 50%;
+    margin-top: -5rem;
     width: 10rem;
     height: 10rem;
     border-radius: 50%;
@@ -2288,6 +2340,7 @@ body {
 .footer__buttons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 33%;
 }
 
@@ -2298,7 +2351,7 @@ body {
 }
 
 .footer__buttons .button {
-    margin-bottom: 1.5rem;
+    margin-bottom: 5rem;
     width: 22rem;
     height: 3.5rem;
     font-size: 1.4rem;
@@ -2370,7 +2423,7 @@ body {
 
     .footer__buttons {
         flex-direction: column;
-        align-items: center;
+
     }
 
     .footer__buttons-container {
@@ -2398,7 +2451,7 @@ body {
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .popup-consultation-form_active,

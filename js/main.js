@@ -19,6 +19,7 @@ let openPopupConsultationBtn = document.querySelector('.header_main .header__con
 let openPopupConsultationBtn2 = document.querySelector('.header_scroll .header__contact-list-request-link');
 let openPopupConsultationBtn3 = document.querySelector('.delivery__btn');
 let openPopupConsultationBtn4 = document.querySelector('.advantages__btn');
+let openPopupConsultationBtn5 = document.querySelector('.faq__request-btn');
 let closePopupConsultationBtn = document.querySelector('.popup-consultation-form .popup-form__btn-close');
 
 
@@ -35,6 +36,10 @@ openPopupConsultationBtn3.addEventListener('click', function () {
 })
 
 openPopupConsultationBtn4.addEventListener('click', function () {
+    popupConsultation.classList.add('popup-consultation-form_active');
+})
+
+openPopupConsultationBtn5.addEventListener('click', function () {
     popupConsultation.classList.add('popup-consultation-form_active');
 })
 
@@ -103,23 +108,23 @@ popupQuestion.addEventListener('click', function (e) {
 
 
 
-let popupCallMe = document.querySelector('.popup-call-me-form');
-let openPopupCallMe = document.querySelector('.footer__btn-call');
-let closePopupCallMe = document.querySelector('.popup-call-me-form .popup-form__btn-close');
+// let popupCallMe = document.querySelector('.popup-call-me-form');
+// let openPopupCallMe = document.querySelector('.footer__btn-call');
+// let closePopupCallMe = document.querySelector('.popup-call-me-form .popup-form__btn-close');
 
-openPopupCallMe.addEventListener('click', function () {
-    popupCallMe.classList.add('popup-call-me-form_active');
-})
+// openPopupCallMe.addEventListener('click', function () {
+//     popupCallMe.classList.add('popup-call-me-form_active');
+// })
 
-closePopupCallMe.addEventListener('click', function () {
-    popupCallMe.classList.remove('popup-call-me-form_active');
-})
+// closePopupCallMe.addEventListener('click', function () {
+//     popupCallMe.classList.remove('popup-call-me-form_active');
+// })
 
-popupCallMe.addEventListener('click', function (e) {
-    if (e.target.classList.contains('popup-call-me-form')) {
-        popupCallMe.classList.remove('popup-call-me-form_active');
-    }
-})
+// popupCallMe.addEventListener('click', function (e) {
+//     if (e.target.classList.contains('popup-call-me-form')) {
+//         popupCallMe.classList.remove('popup-call-me-form_active');
+//     }
+// })
 
 
 

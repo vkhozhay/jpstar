@@ -14,47 +14,54 @@
 
 <body>
 
-    <header class="header header_main ">
-        <div class="container header__container">
-            <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="150"></a>
-            <nav class="header__navigation header__navigation_main  ">
 
-                <ul class="header__navigation-list">
-                    <li class="header__navigation-list-item"><a href="#buy-car"
-                            class="header__navigation-list-link flowing-scroll">ЗАКАЗ
-                            АВТО</a></li>
-                    <li class="header__navigation-list-item"><a href="#delivery"
-                            class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
-                            РЕГИОНЫ</a></li>
-                    <li class="header__navigation-list-item"><a href="#how-to-buy"
-                            class="header__navigation-list-link flowing-scroll header__navigation-list-link_red">КАК
-                            КУПИТЬ</a></li>
-                    <li class="header__navigation-list-item"><a href="#advantages"
-                            class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>
-                    <li class="header__navigation-list-item"><a href="#reviews"
-                            class="header__navigation-list-link flowing-scroll">ОТЗЫВЫ</a>
-                    </li>
-
-                </ul>
-                <ul class="header__contact-list">
-                    <li class="header__contact-list-item"><a href="tel:88005559807"
-                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
-                    </li>
-                    <li class="header__contact-list-item"><a
-                            class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
-                            ЗАЯВКУ</a></li>
-                </ul>
-
-            </nav>
-
-            <div class="header__mobile-nav-btn-wrapper">
-                <div class="header__mobile-nav-btn"></div>
-            </div>
-        </div>
-    </header>
 
 
     <section class="home">
+        <header class="header header_main ">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="150"></a>
+                <nav class="header__navigation header__navigation_main  ">
+
+                    <ul class="header__navigation-list">
+                        <li class="header__navigation-list-item"><a href="#buy-car"
+                                class="header__navigation-list-link flowing-scroll">ЗАКАЗ
+                                АВТО</a></li>
+                        <li class="header__navigation-list-item"><a href="#delivery"
+                                class="header__navigation-list-link flowing-scroll">ДОСТАВКА В
+                                РЕГИОНЫ</a></li>
+                        <li class="header__navigation-list-item"><a href="#how-to-buy"
+                                class="header__navigation-list-link flowing-scroll header__navigation-list-link_red">КАК
+                                КУПИТЬ</a></li>
+                        <li class="header__navigation-list-item"><a href="#advantages"
+                                class="header__navigation-list-link flowing-scroll">ГАРАНТИИ</a></li>
+                        <li class="header__navigation-list-item"><a href="#reviews"
+                                class="header__navigation-list-link flowing-scroll">ОТЗЫВЫ</a>
+                        </li>
+
+                    </ul>
+                    <ul class="header__contact-list">
+                        <li class="header__contact-list-item">
+                            <a href="tel:+79149705848" class="header__contacts-phone-container">
+                                <div class="header__contacts-phone header__contact-list-phone-link">8 800 555-98-07
+                                </div>
+                                <div class="header__contacts-addition">* Звонок по РФ бесплатный</div>
+                            </a>
+                            <!-- <a href="tel:88005559807"
+                                class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a> -->
+                        </li>
+                        <li class="header__contact-list-item"><a
+                                class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
+                                ЗАЯВКУ</a></li>
+                    </ul>
+
+                </nav>
+
+                <div class="header__mobile-nav-btn-wrapper">
+                    <div class="header__mobile-nav-btn"></div>
+                </div>
+            </div>
+        </header>
         <div class="container home__container">
             <div class="home__main-content">
                 <h1 class="home__title">
@@ -105,7 +112,7 @@
                             <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
                                 class="buy-car__form-checkbox" checked required>
                             <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
-                            <p>Соглашаюсь на обработку персональных
+                            <p>Согласен на обработку персональных
                                 данных</p>
                         </div>
                     </form>
@@ -452,13 +459,13 @@
                         <div class="faq__list-item-number">1</div>
                         <div class="faq__list-item-name">Заявка</div>
                         <div class="faq__list-item-disqription">Вы оставляете заявку на сайте либо связываетесь с нами
-                            удобным для вас способом. <a href="#">Оставить заявку.</a> </div>
+                            удобным для вас способом. <a class="faq__request-btn">Оставить заявку.</a> </div>
                     </li>
                     <li class="faq__list-item">
                         <div class="faq__list-item-number">2</div>
                         <div class="faq__list-item-name">Оформление</div>
                         <div class="faq__list-item-disqription">Заключаем договор, Вы вносите гарантийный депозит. <a
-                                href="#">Образец договора.</a> </div>
+                                href="dogovor.pdf" target="_blank">Образец договора.</a> </div>
                     </li>
                     <li class="faq__list-item">
                         <div class="faq__list-item-number">3</div>
@@ -480,7 +487,8 @@
                         <div class="faq__list-item-number">5</div>
                         <div class="faq__list-item-name">Доставка до вашего города</div>
                         <div class="faq__list-item-disqription">Мы доставляем Вам автомобиль в любой регион России
-                            выбранным Вами способом, либо Вы сами забираете его во Владивостоке. <a href="#">Тарифы.</a>
+                            выбранным Вами способом, либо Вы сами забираете его во Владивостоке. <a href="#delivery"
+                                class="flowing-scroll">Тарифы.</a>
                         </div>
                     </li>
                 </ul>
@@ -648,7 +656,7 @@
                         </div>
                         <div class="faq__list-item-disqription">Заказывая авто с аукциона вы можете сэкономить от 10% до
                             30%, в большинстве случаев не маленькая сумма. Вы всегда получите авто с прозрачной
-                            историей. За что никогда мы не сможем ручиться на рынке. Огромный выбор машин, более
+                            историей. За что никогда мы не сможем ручиться на рынке. Огромный выбор, более
                             150 000 машин торгуются каждую неделю. За три месяца более 2.000.000 машин. </div>
                     </li>
                     <li class="faq__list-item">
@@ -741,6 +749,14 @@
 
 
                     <input type="submit" value="РАССЧИТАТЬ СТОИМОСТЬ">
+
+                    <div class="buy-car__form-checkbox-container">
+                        <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
+                            class="buy-car__form-checkbox" checked required>
+                        <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
+                        <p>Согласен на обработку персональных
+                            данных</p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -788,8 +804,9 @@
                     Toyama-shi, Azumiko</a>
 
                 <div class="footer__contacts-socials">
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
-                            enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
+                    <a href="https://www.facebook.com/jpstar.ru" target="_blank" class="footer__socials-item"><svg
+                            xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24"
+                            height="512px" viewBox="0 0 24 24" width="512px">
                             <g>
                                 <path
                                     d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"
@@ -798,7 +815,8 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                    <a href="https://vk.com/app5898182_-62033979#s=52601&force=1" target="_blank"
+                        class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
                             enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
                             <g>
                                 <path
@@ -808,7 +826,8 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                    <a href="https://www.youtube.com/channel/UC2WM2eE-9aT2Dbi4n0_t3Pg?sub_confirmation=1"
+                        target="_blank" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
                             enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
                             <g>
                                 <path
@@ -818,8 +837,9 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" height="512px"
-                            viewBox="-23 -21 682 682.66669" width="512px">
+                    <a href="https://api.whatsapp.com/send?phone=79644327047&text=&source=&data=&app_absent="
+                        target="_blank" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg"
+                            height="512px" viewBox="-23 -21 682 682.66669" width="512px">
                             <g>
                                 <path
                                     d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
@@ -828,10 +848,10 @@
                             </g>
                         </svg>
                     </a>
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
-                            width="512px" height="512px">
+                    <a href="https://www.instagram.com/jpstar.ru/" target="_blank" class="footer__socials-item"><svg
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                            xml:space="preserve" width="512px" height="512px">
                             <g>
                                 <g>
                                     <g>
@@ -857,7 +877,8 @@
                                 </g>
                             </g>
                         </svg></a>
-                    <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                    <a href="https://t.me/joinchat/Flg1nhCKDUMBYulkWejq2g" target="_blank"
+                        class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
                             enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px" class="">
                             <g>
                                 <path
@@ -873,7 +894,7 @@
             <div class="footer__buttons">
                 <div class="footer__buttons-container">
                     <div class="button footer__btn-question">задать вопрос</div>
-                    <div class="button footer__btn-call">обратный звонок</div>
+                    <!-- <div class="button footer__btn-call">обратный звонок</div> -->
                 </div>
                 <div id="vk_groups"></div>
             </div>
@@ -885,8 +906,13 @@
             <a href="index.html" class="header__logo"><img src="img/logo.png" alt="логотип" width="200"></a>
             <nav class="header__navigation">
                 <ul class="header__contact-list">
-                    <li class="header__contact-list-item"><a href="tel:88005559807"
-                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a>
+                    <li class="header__contact-list-item">
+                        <a href="tel:+79149705848" class="header__contacts-phone-container">
+                            <div class="header__contacts-phone header__contact-list-phone-link">8 800 555-98-07</div>
+                            <div class="header__contacts-addition">* Звонок по РФ бесплатный</div>
+                        </a>
+                        <!-- <a href="tel:88005559807"
+                            class="header__contact-list-link header__contact-list-phone-link">8 800 555-98-07</a> -->
                     </li>
                     <li class="header__contact-list-item"><a
                             class="header__contact-list-link header__contact-list-request-link flowing-scroll">ОСТАВИТЬ
@@ -919,16 +945,19 @@
             <h4 class="buy-car__form-title">Получите расчет стоимости
                 авто из Японии</h4>
             <form class="buy-car__form" id="consultation-form_popup">
-                <input type="text" name="consultation__name" id="buy-car__form-name" placeholder="Ваше имя *" required>
-                <input type="tel" name="consultation__phone" id="buy-car__form-phone" placeholder="Телефон *" required>
-                <textarea name="consultation__discription" id="buy-car__form-discription"
+                <input type="text" name="consultation__name" id="consultation__form-name" placeholder="Ваше имя *"
+                    required>
+                <input type="tel" name="consultation__phone" id="consultation__form-phone" placeholder="Телефон *"
+                    required>
+                <textarea name="consultation__discription" id="consultation__form-discription"
                     placeholder="Информация об авто:                           - марка;                                                        - модель;                                                        - год;                                                                 - метод ввоза."></textarea>
                 <input type="submit" value="ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ">
                 <div class="buy-car__form-checkbox-container">
-                    <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
+                    <input type="checkbox" name="consultation__discription" id="consultation__form-checkbox"
                         class="buy-car__form-checkbox" checked required>
-                    <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
-                    <p>Соглашаюсь на обработку персональных
+                    <label for="consultation__form-checkbox"
+                        class="buy-car__form-checkbox-label consultation-label"></label>
+                    <p>Согласен на обработку персональных
                         данных</p>
                 </div>
             </form>
@@ -988,6 +1017,14 @@
 
 
                 <input type="submit" value="РАССЧИТАТЬ СТОИМОСТЬ">
+
+                <div class="buy-car__form-checkbox-container">
+                    <input type="checkbox" name="consultation__discription" id="popup-calculate__form-checkbox"
+                        class="buy-car__form-checkbox" checked required>
+                    <label for="popup-calculate__form-checkbox" class="buy-car__form-checkbox-label"></label>
+                    <p>Согласен на обработку персональных
+                        данных</p>
+                </div>
             </form>
         </div>
     </div>
@@ -1003,17 +1040,17 @@
                     placeholder="Ваш вопрос"></textarea>
                 <input type="submit" value="ЗАДАТЬ ВОПРОС">
                 <div class="buy-car__form-checkbox-container">
-                    <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
+                    <input type="checkbox" name="consultation__discription" id="question__form-checkbox"
                         class="buy-car__form-checkbox" checked required>
-                    <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
-                    <p>Соглашаюсь на обработку персональных
+                    <label for="question__form-checkbox" class="buy-car__form-checkbox-label"></label>
+                    <p>Согласен на обработку персональных
                         данных</p>
                 </div>
             </form>
         </div>
     </div>
 
-    <div class="popup-call-me-form">
+    <!-- <div class="popup-call-me-form">
         <div class="buy-car__form-container">
             <div class="popup-form__btn-close"></div>
             <h4 class="buy-car__form-title">Введите свой номер телефона, и мы Вам перезвоним</h4>
@@ -1022,15 +1059,15 @@
                 <input type="tel" name="callback__phone" id="buy-car__form-phone" placeholder="Телефон *" required>
                 <input type="submit" value="ОТПРАВИТЬ">
                 <div class="buy-car__form-checkbox-container">
-                    <input type="checkbox" name="consultation__discription" id="buy-car__form-checkbox"
+                    <input type="checkbox" name="consultation__discription" id="call-me__form-checkbox"
                         class="buy-car__form-checkbox" checked required>
-                    <label for="buy-car__form-checkbox" class="buy-car__form-checkbox-label"></label>
-                    <p>Соглашаюсь на обработку персональных
+                    <label for="call-me__form-checkbox" class="buy-car__form-checkbox-label"></label>
+                    <p>Согласен на обработку персональных
                         данных</p>
                 </div>
             </form>
         </div>
-    </div>
+    </div> -->
 
     <div class="popup-thanks">
         <div class="popup-thanks__container">
@@ -1046,8 +1083,9 @@
 
             <div class="popup-thanks__subtitle">Присоединяйтесь к нам в социальных сетях:</div>
             <div class="footer__contacts-socials">
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
-                        enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
+                <a href="https://www.facebook.com/jpstar.ru" target="_blank" class="footer__socials-item"><svg
+                        xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="512px"
+                        viewBox="0 0 24 24" width="512px">
                         <g>
                             <path
                                 d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"
@@ -1055,7 +1093,8 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                <a href="https://vk.com/app5898182_-62033979#s=52601&force=1" target="_blank"
+                    class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
                         enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
                         <g>
                             <path
@@ -1064,7 +1103,8 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
+                <a href="https://www.youtube.com/channel/UC2WM2eE-9aT2Dbi4n0_t3Pg?sub_confirmation=1" target="_blank"
+                    class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
                         enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px">
                         <g>
                             <path
@@ -1073,7 +1113,8 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" height="512px"
+                <a href="https://api.whatsapp.com/send?phone=79644327047&text=&source=&data=&app_absent="
+                    target="_blank" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" height="512px"
                         viewBox="-23 -21 682 682.66669" width="512px">
                         <g>
                             <path
@@ -1083,10 +1124,10 @@
                         </g>
                     </svg>
                 </a>
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px"
-                        viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
-                        width="512px" height="512px">
+                <a href="https://www.instagram.com/jpstar.ru/" target="_blank" class="footer__socials-item"><svg
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                        xml:space="preserve" width="512px" height="512px">
                         <g>
                             <g>
                                 <g>
@@ -1112,8 +1153,9 @@
                             </g>
                         </g>
                     </svg></a>
-                <a href="#" class="footer__socials-item"><svg xmlns="http://www.w3.org/2000/svg" id="Bold"
-                        enable-background="new 0 0 24 24" height="512px" viewBox="0 0 24 24" width="512px" class="">
+                <a href="https://t.me/joinchat/Flg1nhCKDUMBYulkWejq2g" target="_blank" class="footer__socials-item"><svg
+                        xmlns="http://www.w3.org/2000/svg" id="Bold" enable-background="new 0 0 24 24" height="512px"
+                        viewBox="0 0 24 24" width="512px" class="">
                         <g>
                             <path
                                 d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"
