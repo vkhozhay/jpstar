@@ -40,7 +40,7 @@ try {
     $mail->setFrom('php.mailer.bot@gmail.com', 'php mailer'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('vlad.khozhay@yahoo.com');  
+    $mail->addAddress('jpnstar@yandex.ru');  
     //$mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
 

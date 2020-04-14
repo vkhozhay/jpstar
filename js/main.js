@@ -1,3 +1,5 @@
+//open mobile navigation
+
 let mobileNavBtnContainer = document.querySelector('.header__mobile-nav-btn-wrapper');
 let mobileNavBtn = document.querySelector('.header__mobile-nav-btn');
 let mobileHeader = document.querySelector('.header_main');
@@ -14,6 +16,7 @@ mobileNavBtnContainer.addEventListener('click', function () {
 })
 
 
+//open pop-ups
 let popupConsultation = document.querySelector('.popup-consultation-form');
 let openPopupConsultationBtn = document.querySelector('.header_main .header__contact-list-request-link');
 let openPopupConsultationBtn2 = document.querySelector('.header_scroll .header__contact-list-request-link');
@@ -108,25 +111,6 @@ popupQuestion.addEventListener('click', function (e) {
 
 
 
-// let popupCallMe = document.querySelector('.popup-call-me-form');
-// let openPopupCallMe = document.querySelector('.footer__btn-call');
-// let closePopupCallMe = document.querySelector('.popup-call-me-form .popup-form__btn-close');
-
-// openPopupCallMe.addEventListener('click', function () {
-//     popupCallMe.classList.add('popup-call-me-form_active');
-// })
-
-// closePopupCallMe.addEventListener('click', function () {
-//     popupCallMe.classList.remove('popup-call-me-form_active');
-// })
-
-// popupCallMe.addEventListener('click', function (e) {
-//     if (e.target.classList.contains('popup-call-me-form')) {
-//         popupCallMe.classList.remove('popup-call-me-form_active');
-//     }
-// })
-
-
 
 let popupThanks = document.querySelector('.popup-thanks');
 let closePopupThanks = document.querySelector('.popup-thanks .popup-form__btn-close');
@@ -144,7 +128,7 @@ popupThanks.addEventListener('click', function (e) {
 
 
 
-
+//open mobile navigation with swipe
 let body = document.querySelector('body');
 let mobileNav = document.querySelector('.header__navigation_main');
 let bodyHummer = new Hammer(body);
@@ -164,21 +148,23 @@ bodyHummer.on('swiperight', function () {
 })
 
 
+//flowing scroll
 $('.flowing-scroll').on('click', function () {
     let el = $(this);
-    let dest = el.attr('href'); // получаем направление
-    if (dest !== undefined && dest !== '') { // проверяем существование
+    let dest = el.attr('href');
+    if (dest !== undefined && dest !== '') {
         $('.header_main').removeClass('header_main_active');
         $('.header__mobile-nav-btn').removeClass('header__mobile-nav-btn_active');
         $('html').animate({
-                scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-            }, 500 // скорость прокрутки
-        );
+            scrollTop: $(dest).offset().top
+        }, 500);
     }
 
     return false;
 });
 
+
+//show fixed header
 var fixedHeader = $('.header_scroll');
 
 $(window).scroll(function () {
@@ -189,6 +175,8 @@ $(window).scroll(function () {
     }
 });
 
+
+//open faq list items
 $('.faq__list').on('click', e => openFAQ(e));
 
 function openFAQ(e) {
@@ -206,7 +194,7 @@ function openFAQ(e) {
 
 
 
-
+//add video reviews
 let videosContainers = document.querySelectorAll('.reviews__video-item iframe');
 shuffle(videos);
 
@@ -214,11 +202,11 @@ for (let i = 0; i < videosContainers.length; i++) {
     videosContainers[i].setAttribute('src', videos[i]);
 }
 
-
+//add reviews
 let reviewsContainer = document.querySelector('.swiper-wrapper');
 shuffle(reviews);
 
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < reviews.length; i++) {
     let newSlide = document.createElement('div');
     newSlide.classList.add('swiper-slide');
     newSlide.innerHTML = `<div class="slide__img-container"><img src="${reviews[i].photoUrl}" alt=""></div>
@@ -235,7 +223,7 @@ for (let i = 0; i < 8; i++) {
 
 
 
-// Отправка данных на сервер
+// send forms 
 $('#consultation-form_main').trigger('reset');
 $(function () {
     'use strict';
@@ -252,7 +240,7 @@ $(function () {
                 if (msg == 'ok') {
                     $('.popup-thanks').addClass('popup-thanks_active');
                     $('#consultation-form_main').trigger('reset');
-                    // очистка формы
+
                 } else {
                     alert('Ошибка');
                 }
@@ -278,7 +266,7 @@ $(function () {
                 if (msg == 'ok') {
                     $('.popup-thanks').addClass('popup-thanks_active');
                     $('#calculate-form_main').trigger('reset');
-                    // очистка формы
+
                 } else {
                     alert('Ошибка');
                 }
@@ -305,7 +293,7 @@ $(function () {
                     $('.popup-consultation-form').removeClass('popup-consultation-form_active');
                     $('.popup-thanks').addClass('popup-thanks_active');
                     $('#consultation-form_popup').trigger('reset');
-                    // очистка формы
+
                 } else {
                     alert('Ошибка');
                 }
@@ -332,7 +320,7 @@ $(function () {
                     $('.popup-calculate-form').removeClass('popup-calculate-form_active');
                     $('.popup-thanks').addClass('popup-thanks_active');
                     $('#calculate-form_popup').trigger('reset');
-                    // очистка формы
+
                 } else {
                     alert('Ошибка');
                 }
@@ -359,7 +347,7 @@ $(function () {
                     $('.popup-question-form').removeClass('popup-question-form_active');
                     $('.popup-thanks').addClass('popup-thanks_active');
                     $('#question-form_popup').trigger('reset');
-                    // очистка формы
+
                 } else {
                     alert('Ошибка');
                 }
@@ -369,36 +357,9 @@ $(function () {
     });
 });
 
-$('#call-me-form_popup').trigger('reset');
-$(function () {
-    'use strict';
-    $('#call-me-form_popup').on('submit', function (e) {
-        e.preventDefault();
-        $.ajax({
-            url: 'mail.php',
-            type: 'POST',
-            contentType: false,
-            processData: false,
-            data: new FormData(this),
-            success: function (msg) {
-                console.log(msg);
-                if (msg == 'ok') {
-                    $('.popup-call-me-form').removeClass('popup-call-me-form_active');
-                    $('.popup-thanks').addClass('popup-thanks_active');
-                    $('#call-me-form_popup').trigger('reset');
-                    // очистка формы
-                } else {
-                    alert('Ошибка');
-                }
-
-            }
-        });
-    });
-});
 
 
-
-
+//add slider
 var swiper = new Swiper('.swiper-container', {
     navigation: {
         nextEl: '.swiper-button-next',
@@ -407,6 +368,7 @@ var swiper = new Swiper('.swiper-container', {
     loop: true
 });
 
+//add vk widget
 VK.Widgets.Group("vk_groups", {
     mode: 3,
     no_cover: 1,
